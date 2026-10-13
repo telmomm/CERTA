@@ -67,7 +67,7 @@ No family covers more than two or three criteria at once; the proposal column is
 | Confidence intervals | No | Not applicable | No | No | Yes (ppm) | No | Yes |
 | Theoretical bound as reference | No | It is the bound | No | No | No | No | Yes (ambiguity groups) |
 | Open code and data | No | In-house programs | No | No | Industrial data | No | Yes |
-| Evaluation circuits | Benchmark filters | Small filters | Filters | Benchmark filters | ICs, MEMS | Specific MCU | Filters + real biomedical front ends |
+| Evaluation circuits | Benchmark filters | Small filters | Filters | Benchmark filters | ICs, MEMS | Specific MCU | Filters + three application cases |
 
 ## Identified gap
 
@@ -168,16 +168,18 @@ Each detection probability is reported with a Clopper–Pearson interval. The nu
 
 ## Experimental methodology
 
-Evaluation is on six circuits: three benchmark ones to compare with the literature and three application ones that give the work its identity.
+Evaluation is on six circuits: three benchmark ones to compare with the literature and three application ones, each with a different kind of risk. The method is domain-neutral; the application circuits show that risk weighting is general.
 
 | Circuit | Role | Why |
 | --- | --- | --- |
 | Sallen-Key band-pass | Benchmark | It is the most used; it allows published figures to be reproduced |
 | Four-op-amp biquad | Benchmark | Medium size, many ambiguity groups |
 | Leapfrog low-pass | Benchmark | The largest of the usual ones |
-| ECG front end | Application | Already modelled in the author's repository; links with the IEC 60601 line |
-| Howland current source | Application | Faults with an impact on patient safety; bioimpedance |
-| Bridge or thermistor conditioning | Application | Generic industrial case; shows that it is not only biomedical |
+| Battery measurement chain (cell voltage and current) | Application | Functional safety: an error that hides an overvoltage is far worse than one that only reduces availability |
+| ECG front end | Application | Patient safety (IEC 60601, ISO 14971); already modelled in the author's repository |
+| Bridge sensor conditioning in an unattended node | Application | Data integrity: an undetected drift corrupts the record without anyone noticing |
+
+The specific application circuits are still to be refined. The Howland current source (bioimpedance) is kept in reserve as a second biomedical case.
 
 ### Experiments
 
@@ -192,7 +194,7 @@ Evaluation is on six circuits: three benchmark ones to compare with the literatu
 
 ### Hardware validation
 
-Two boards (Sallen-Key and ECG front end) with fault injection by relays or jumpers, measured with the ADC and DAC of a microcontroller (ESP32 or STM32). A small number of faults per board is enough to check that the simulated test ranking is preserved.
+Simple boards with typical analog blocks (Sallen-Key, biquad and similar) and fault injection by relays or jumpers, measured with the ADC and DAC of a microcontroller (ESP32 or STM32). The boards are kept deliberately simple: the aim is to validate the method, not an application. A small number of faults per board is enough to check that the simulated test ranking is preserved.
 
 E5 deserves special attention: if it is shown that with 50 runs the rankings of published methods are not stable, that alone calls part of the literature into question and reinforces the need to certify.
 
@@ -216,7 +218,7 @@ This layer also serves the web GUI: the user uploads a netlist and gets the test
 
 ## Phases and roadmap
 
-The project takes about 26 months part-time (November 2026 to December 2028), in five phases that leave seven publications. The rule is to start writing each paper as soon as the experiment that supports it is closed, not at the end of the phase. The introduction and the state of the art of F0 are reused in all of them.
+The project takes about 26 months part-time (November 2026 to December 2028), in six phases that leave seven publications. The rule is to start writing each paper as soon as the experiment that supports it is closed, not at the end of the phase. The introduction and the state of the art of F0 are reused in all of them.
 
 The main paper closes F2 and coincides with the start of the hardware phase.
 
@@ -225,10 +227,11 @@ The main paper closes F2 and coincides with the start of the hardware phase.
 | Phase | Dates | Work | Experiments | Milestone to move on | If the milestone fails |
 | --- | --- | --- | --- | --- | --- |
 | F0 State of the art | Nov 2026 – Jan 2027 | Systematic search in Scopus, IEEE Xplore and Web of Science with a PRISMA protocol; in-depth reading of Chakrabarti, Huang, Zilch and Tang | — | G0: nobody has combined embedded cost, risk and certification at board level | The benchmark and the certification become the main contribution |
-| F1 Benchmark and certification | Jan – May 2027 | `candidates` and `metrics` modules, intervals and adaptive Monte Carlo, baselines; first public release of `spicefault.testdesign` with a DOI | E1, E5 | G1: the baselines reproduce the published figures, or the discrepancy is documented | The lack of reproducibility becomes the central result of P2 |
+| F1 Benchmark and certification | Jan – May 2027 | `candidates` and `metrics` modules, intervals and adaptive Monte Carlo, baselines; definition of the three application cases; first public release of `spicefault.testdesign` with a DOI | E1, E5 | G1: the baselines reproduce the published figures, or the discrepancy is documented | The lack of reproducibility becomes the central result of P2 |
 | F2 Formulation and algorithms | Jun – Nov 2027 | `costmodel`, `faultprior`, greedy, exact ILP, theoretical bound by SVD | E2, E3, E4 | G2: the greedy stays close to the optimum and risk weighting changes the selection | P3 focuses on the formulation and the benchmark; the greedy remains one more method |
-| F3 Board validation | Oct 2027 – Apr 2028 | Two boards (Sallen-Key and ECG) with fault injection; firmware on ESP32 or STM32 that runs the test plan | E6 | G3: the simulated test ranking holds on the board | The simulation-to-reality gap is published and bounded |
-| F4 Biomedical application | May – Dec 2028 | ECG front end and Howland source with severities according to IEC 60601; self-test plan exportable from the web GUI | E3 and E4 on biomedical circuits | — | — |
+| F3 Board validation | Oct 2027 – Apr 2028 | Simple boards with typical analog blocks (Sallen-Key, biquad and similar) and fault injection; firmware on ESP32 or STM32 that runs the test plan | E6 | G3: the simulated test ranking holds on the board | The simulation-to-reality gap is published and bounded |
+| F4 Applications | May – Dec 2028 | Three cases with different kinds of risk: battery measurement chain, ECG front end and bridge sensor conditioning | E3 and E4 on the application circuits | — | — |
+| F5 Tool and dissemination | In parallel with F4 | Self-test plan exportable from the web GUI, documentation, dataset and teaching material | — | — | — |
 
 F2 and F3 overlap by two months on purpose: board design starts while the F2 experiments are being closed.
 
@@ -241,14 +244,14 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 | P3 | Main paper: joint test design with embedded cost, risk and statistical certification | Sep 2027 – Jan 2028 | Jan 2028 | IEEE Transactions on Reliability or Reliability Engineering & System Safety | E1–E5 |
 | P4 | Conference paper with the first board measurements | Jan – Feb 2028 | Feb 2028 | I2MTC or MeMeA | First results of E6 |
 | P5 | Embedded self-test validated on a board | Mar – Jun 2028 | Jun 2028 | IEEE Transactions on Instrumentation and Measurement | Full E6 |
-| P6 | Data descriptor: simulations and measurements with fixed splits | Jun – Jul 2028 | Jul 2028 | Data in Brief | F1 and F3 |
-| P7 | Risk-weighted self-test of biomedical front ends according to IEC 60601 | Aug – Nov 2028 | Nov 2028 | IEEE Journal of Translational Engineering in Health and Medicine or Medical Engineering & Physics | F4 |
+| P6 | Data descriptor: simulations and measurements with fixed splits | Jun – Jul 2028 | Jul 2028 | Data in Brief | F1, F3 and F5 |
+| P7 | Risk-weighted self-test in three applications with different kinds of risk: functional safety, patient safety and data integrity | Aug – Nov 2028 | Nov 2028 | To be decided once the cases are fixed | F4 |
 
 ### Contributions without a paper
 
 - spicefault releases with a DOI on Zenodo at the close of F1, F2 and F3, so that each paper cites the exact code it uses.
 - The spicefault paper for IEEE TCAD can mention `testdesign` as work in progress.
-- From F4 onwards, the web GUI generates fault diagnosis exercises for teaching.
+- In F5, the web GUI generates fault diagnosis exercises for teaching.
 
 ### Open decisions
 
@@ -265,7 +268,7 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 | The fault probabilities and severities look arbitrary | Take rates from reliability standards and severities from specifications; sensitivity analysis to those weights |
 | The (1 − 1/e) guarantee does not hold with shared tolerances | Present it as a motivated heuristic and measure the gap to the ILP |
 | The computational cost of the large Monte Carlo | The parallelisation spicefault already has and adaptive sampling |
-| Hardware validation drags on | Limit it to two boards and few faults; the main paper does not depend on it |
+| Hardware validation drags on | Limit it to simple boards with benchmark circuits and few faults; the main paper does not depend on it |
 
 **Still to be checked:** this review is based on web search. Before writing, a systematic search in Scopus or IEEE Xplore is advisable, especially from 2023 to 2026 and for the groups of Stratigopoulos and Florence, in case one of them has already combined compaction with localisation at board level.
 

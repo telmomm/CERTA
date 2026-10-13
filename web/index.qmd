@@ -63,7 +63,7 @@ Confidence intervals, a theoretical bound as reference and an open benchmark.
 :::
 :::
 
-The expected outcome is an open tool that, starting from the netlist of a circuit, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and on biomedical front ends.
+The expected outcome is an open tool that, starting from the netlist of a circuit, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and demonstrated on three application cases.
 
 ![](assets/backgrounds/certa-divider.png){.divider alt=""}
 

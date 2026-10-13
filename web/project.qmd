@@ -31,11 +31,13 @@ The plan is exported in a format that the device firmware can run directly.
 
 ## Where it is validated
 
+The method is domain-neutral. It is validated on benchmark circuits and demonstrated on three application cases, each with a different kind of risk.
+
 | Circuit | Role |
 | --- | --- |
-| Sallen-Key band-pass, biquad and leapfrog low-pass | Benchmark: they allow comparison with published figures |
-| ECG front end | Biomedical application |
-| Howland current source | Biomedical application: faults with an impact on patient safety |
-| Bridge or thermistor conditioning | Generic industrial case |
+| Sallen-Key band-pass, biquad and leapfrog low-pass | Benchmark: they allow comparison with published figures and are the ones built on boards |
+| Battery measurement chain (cell voltage and current) | Application: functional safety |
+| ECG front end | Application: patient safety |
+| Bridge sensor conditioning in an unattended node | Application: data integrity |
 
-Validation includes two boards with fault injection, measured with the ADC and DAC of a microcontroller.
+Hardware validation uses simple boards with typical analog blocks and fault injection, measured with the ADC and DAC of a microcontroller.

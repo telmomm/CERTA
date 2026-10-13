@@ -12,6 +12,8 @@
 
 **Certified, Embedded, Risk-aware Test design for Analog circuits.** A research project on how to decide what an embedded system should measure in order to self-diagnose its analog electronics at board level.
 
+**Objective.** Given the schematic of a board, the measurement hardware it carries and a risk table of its faults, to obtain a self-test plan with certified coverage, and to show on real boards that the firmware detects the injected faults with the predicted coverage. The method is domain-neutral; it is demonstrated on three application cases with different kinds of risk.
+
 ## The problem
 
 Analog test point selection has been studied for forty years and is now saturated with metaheuristics applied to the same benchmark filters. The gap is not in the optimiser but in the formulation: nobody brings together the five pieces that an in-field self-test needs.
@@ -24,7 +26,7 @@ Analog test point selection has been studied for forty years and is now saturate
 | <img src="docs/assets/icons/certification-box.png" width="40" alt=""> | Percentages without uncertainty, from 50 to 120 Monte Carlo runs | Coverage with confidence intervals and adaptive Monte Carlo |
 | <img src="docs/assets/icons/certification-box.png" width="40" alt=""> | No theoretical bound and no reproducible comparison | Gap to the ambiguity groups and an open benchmark of reimplemented baselines |
 
-The expected outcome is a `spicefault.testdesign` module that, starting from a netlist, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and on biomedical front ends. The motivation, the formulation and the full plan are in [GUIDE.md](GUIDE.md).
+The expected outcome is a `spicefault.testdesign` module that, starting from a netlist, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and demonstrated on three application cases. The motivation, the formulation and the full plan are in [GUIDE.md](GUIDE.md).
 
 <p align="center"><img src="docs/assets/backgrounds/certa-divider.png" alt="" width="100%"></p>
 
@@ -33,10 +35,11 @@ The expected outcome is a `spicefault.testdesign` module that, starting from a n
 | Package | What it does | Milestone | Status |
 | --- | --- | --- | --- |
 | [WP0 · State of the art](WP0-state-of-the-art/) | Systematic review in Scopus, IEEE Xplore and Web of Science | G0: the gap exists | In progress |
-| [WP1 · Benchmark and certification](WP1-benchmark-and-certification/) | Reimplemented baselines, intervals and adaptive Monte Carlo | G1: the baselines reproduce the published figures | Pending |
+| [WP1 · Benchmark and certification](WP1-benchmark-and-certification/) | Reimplemented baselines, intervals and adaptive Monte Carlo; definition of the application cases | G1: the baselines reproduce the published figures | Pending |
 | [WP2 · Formulation and algorithms](WP2-formulation-and-algorithms/) | Cost model, risk weighting, greedy, exact ILP and theoretical bound | G2: the greedy stays close to the optimum and risk changes the selection | Pending |
-| [WP3 · Board validation](WP3-board-validation/) | Two boards with fault injection and self-test firmware | G3: the simulated ranking holds on the board | Pending |
-| [WP4 · Biomedical application](WP4-biomedical-application/) | ECG front end and Howland source with severities according to IEC 60601 | — | Pending |
+| [WP3 · Board validation](WP3-board-validation/) | Simple boards with typical analog blocks (Sallen-Key, biquad), fault injection and self-test firmware | G3: the simulated ranking holds on the board | Pending |
+| [WP4 · Applications](WP4-applications/) | Three cases with different kinds of risk: battery measurement chain, ECG front end and bridge sensor conditioning | — | Pending |
+| [WP5 · Tool and dissemination](WP5-tool-and-dissemination/) | Web GUI, documentation, dataset and teaching material | — | Pending |
 
 The tasks of each package and their estimated duration are in [ROADMAP.md](ROADMAP.md).
 
