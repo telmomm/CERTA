@@ -1,0 +1,76 @@
+---
+pagetitle: "CERTA · Certified self-test for analog electronics"
+page-layout: full
+toc: false
+---
+
+::: {.hero style="background-image: url(assets/backgrounds/certa-background-dark.png);"}
+![](assets/logo/certa-logo-dark.png){fig-alt="CERTA: Certified, Embedded, Risk-aware Test design for Analog circuits" fig-align="left"}
+
+[What an embedded system should measure to diagnose its own analog electronics.]{.tagline}
+
+[A research project on self-test design at board level: with the real cost of the hardware, weighted by the risk of each fault and with statistically certified coverage.]{.lead-text}
+
+[The project](project.qmd){.btn .btn-primary role="button"}
+[Repository on GitHub](https://github.com/telmomm/CERTA){.btn .btn-outline-light role="button"}
+:::
+
+## The problem
+
+Analog test point selection has been studied for forty years and is now saturated with metaheuristics applied to the same benchmark filters. The gap is not in the optimiser but in the formulation: nobody brings together the pieces that an in-field self-test needs.
+
+## What CERTA proposes
+
+::: {.grid .pillars}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.pillar}
+![](assets/icons/test-box.png){alt=""}
+
+### Joint design
+
+Node, stimulus and measured feature are chosen at once, not separately.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.pillar}
+![](assets/icons/embedded-box.png){alt=""}
+
+### Embedded cost
+
+A model of the real hardware: channels, switches, ADC noise and resolution.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.pillar}
+![](assets/icons/risk-box.png){alt=""}
+
+### Risk-weighted
+
+Each fault weighs according to its probability and its severity, with false alarms bounded.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.pillar}
+![](assets/icons/certification-box.png){alt=""}
+
+### Certified coverage
+
+Confidence intervals, a theoretical bound as reference and an open benchmark.
+:::
+:::
+:::
+
+The expected outcome is an open tool that, starting from the netlist of a circuit, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and on biomedical front ends.
+
+![](assets/backgrounds/certa-divider.png){.divider alt=""}
+
+## Current status
+
+::: {.status}
+**WP0 · State of the art, in progress.** Systematic literature review in Scopus, IEEE Xplore and Web of Science to establish whether the gap that motivates the project exists.
+
+[See the work plan](plan.qmd)
+:::

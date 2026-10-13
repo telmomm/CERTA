@@ -1,0 +1,469 @@
+id,level,stage,sel_node,sel_stimulus,sel_measurement,fault_type,objective,tolerances,family,C2_hw_cost,C3_risk,C4_certification,hw_validation,notes
+R1292,ns,ns,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R0812,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R0746,ns,ns,y,n,n,catastrophic,isolation,ns,greedy,n,n,n,ns,
+R0747,ns,ns,y,n,n,catastrophic,isolation,ns,greedy,n,n,n,ns,
+R0490,ns,ns,n,y,n,both,detection,ns,sensitivity,n,n,n,ns,
+R0356,board,maintenance,y,y,n,ns,isolation,ns,graph,p,n,n,ns,limited node access on unpowered boards
+R1610,ns,ns,n,y,n,parametric,detection,ns,other,n,n,n,y,
+R1507,ns,production,n,y,n,catastrophic,detection,ns,other,n,n,n,ns,
+R1480,ns,ns,n,y,n,parametric,detection,ns,ml,n,n,n,ns,
+R1413,ns,ns,y,y,n,both,isolation,y,other,n,n,n,ns,
+R1439,ns,ns,n,y,n,ns,detection,ns,ml,n,n,n,ns,
+R1067,ns,ns,n,y,n,ns,isolation,y,metaheuristic,n,n,n,ns,
+R0981,ns,ns,n,y,n,ns,isolation,y,metaheuristic,p,n,n,ns,accounts for measurement imprecision
+R0987,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R0897,ic,production,y,y,n,ns,specification,ns,other,n,n,n,ns,
+R0801,ns,production,y,y,n,ns,specification,ns,other,n,n,n,ns,
+R0781,ns,production,n,y,n,parametric,specification,y,other,n,p,n,ns,acceptance region with process tolerances
+R0696,ic,production,n,y,n,ns,specification,ns,other,p,n,n,ns,stimulus constrained to the limits of the equipment
+R0590,ns,production,y,y,y,both,isolation,ns,other,n,n,n,ns,"stimulus, nodes and measurement instants at the same time"
+R0505,ns,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0542,ic,production,n,n,y,both,detection,y,exact,n,n,n,ns,statistical detectability under process variation
+R1763,ns,ns,y,n,n,ns,isolation,ns,ml,n,n,n,ns,
+R1715,ic,production,y,y,y,catastrophic,detection,ns,exhaustive,p,n,n,ns,minimises test time
+R1687,ic,production,y,y,y,catastrophic,detection,ns,exhaustive,p,n,n,ns,
+R1663,ns,ns,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R1652,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1624,ns,design,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1625,ns,design,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R1546,ns,ns,y,n,n,parametric,isolation,ns,graph,n,n,n,ns,
+R1550,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1527,ns,ns,n,y,n,parametric,detection,ns,other,n,n,n,ns,
+R1444,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R1450,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1456,board,field,y,n,n,ns,isolation,ns,other,n,p,n,ns,focuses on the high-risk failure mechanisms
+R1406,board,field,y,n,n,ns,detection,ns,other,n,p,n,ns,chooses points according to the most susceptible components (FMMEA)
+R1426,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1387,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1263,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1163,ns,design,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1164,ns,design,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1170,ic,production,n,y,n,ns,detection,ns,metaheuristic,n,p,n,ns,minimises misclassified devices
+R1177,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1101,ic,production,n,y,y,ns,detection,y,other,n,n,n,ns,
+R1104,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1071,ns,ns,n,y,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1081,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1086,ic,production,n,n,y,ns,specification,y,other,p,p,n,ns,adaptive test: test time versus quality
+R0836,ns,ns,n,y,n,parametric,isolation,ns,ml,n,n,n,ns,
+R0838,ns,ns,n,y,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0683,ic,production,n,n,y,ns,specification,ns,other,n,p,n,ns,fault coverage and yield coverage
+R0698,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R0498,ns,ns,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0446,ns,ns,n,y,n,ns,detection,ns,sensitivity,n,n,n,ns,
+R0317,ns,ns,y,y,n,ns,isolation,ns,sensitivity,n,n,n,ns,
+R0265,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R0234,ns,ns,y,y,n,ns,detection,ns,sensitivity,n,n,n,ns,
+R0128,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0076,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R0077,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R1425,ns,ns,y,n,n,ns,isolation,ns,exact,n,n,n,ns,
+R0954,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R0635,ic,design,n,y,n,ns,specification,ns,other,n,n,n,ns,
+R0574,ic,design,n,y,n,ns,specification,ns,other,n,n,n,ns,
+R0604,ic,design,n,y,n,ns,specification,ns,other,n,n,n,ns,
+R0107,ns,ns,y,n,n,parametric,identification,ns,sensitivity,p,n,n,ns,the ambiguity groups depend on the measurement accuracy
+R1853,ic,production,n,n,y,ns,detection,ns,ml,p,n,p,ns,confidence-based early stopping
+R1859,ns,production,y,y,y,catastrophic,detection,ns,exhaustive,n,n,n,y,validated with hardware-emulated fault injection
+R1881,ns,production,y,y,y,catastrophic,detection,ns,exhaustive,n,n,n,y,validated with hardware-emulated fault injection
+R1796,ns,ns,n,y,n,both,isolation,ns,ml,n,n,n,ns,
+R1799,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1790,ns,ns,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R2429,ic,production,n,y,n,ns,specification,y,ml,n,y,n,ns,minimises false positives and negatives when generating the test
+R1683,ic,production,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R1684,ic,production,n,n,n,catastrophic,detection,ns,other,n,n,n,ns,
+R1707,ns,ns,n,y,n,parametric,detection,ns,other,n,n,n,ns,
+R2197,ic,production,n,y,n,ns,specification,y,other,n,n,n,ns,
+R1581,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1623,ns,ns,y,y,n,parametric,detection,ns,exact,n,n,n,ns,
+R1567,ns,ns,y,n,n,ns,isolation,y,metaheuristic,n,n,n,ns,
+R1576,ns,ns,n,y,n,ns,detection,y,exhaustive,n,n,n,ns,
+R1506,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1536,ic,production,n,y,n,ns,specification,y,ml,n,n,n,ns,
+R1449,ns,ns,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R1454,ns,ns,y,n,n,parametric,isolation,ns,graph,n,n,n,ns,
+R1462,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1417,ns,ns,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R1421,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1347,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1384,ic,production,n,n,y,ns,specification,y,other,p,p,n,y,per-device adaptive test: test resources versus quality
+R1295,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1297,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1321,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1330,ic,production,n,n,y,ns,specification,ns,other,p,p,n,y,adaptive test: quality versus time
+R1331,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1245,ns,ns,y,n,y,ns,isolation,ns,metaheuristic,n,n,n,ns,diagnostic information with prior and posterior entropy
+R1248,ns,ns,n,y,n,both,isolation,ns,metaheuristic,n,n,n,ns,
+R1275,ns,ns,n,y,n,ns,detection,ns,ml,n,n,n,ns,
+R1281,ns,ns,n,y,n,ns,specification,ns,metaheuristic,n,n,n,ns,
+R1157,ic,production,n,n,y,ns,specification,y,ml,p,p,n,y,
+R1195,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1202,ic,production,n,n,y,parametric,specification,y,other,n,y,p,ns,orders tests by statistically estimated defect level
+R1209,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1214,ns,ns,n,y,n,ns,detection,ns,ml,n,n,n,ns,
+R1112,ic,ns,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1115,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1147,ic,ns,n,y,n,both,detection,ns,metaheuristic,n,n,n,ns,
+R1973,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,per-device adaptive test
+R1060,ns,ns,n,y,n,both,detection,ns,other,n,n,n,ns,
+R1088,board,maintenance,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,y,applied to the diagnosis of a board
+R1972,ns,ns,n,y,n,ns,specification,ns,metaheuristic,n,n,n,ns,
+R0964,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0993,ic,production,n,n,y,parametric,specification,y,other,n,y,p,ns,compaction with a statistical performance model (Monte Carlo)
+R1008,ic,production,n,y,n,ns,specification,ns,other,p,n,n,ns,reduces the cost of the test equipment
+R0894,ic,production,n,n,y,ns,specification,y,ml,n,y,n,y,reports defect escapes and yield loss
+R0796,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0829,ns,ns,y,n,n,both,isolation,ns,other,n,n,n,ns,
+R0773,ic,ns,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R0785,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0713,ns,ns,y,n,y,catastrophic,isolation,ns,other,n,n,n,ns,
+R0735,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0624,ns,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0636,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0652,ns,production,n,y,n,ns,specification,ns,other,p,n,n,ns,reduces test time
+R0504,ns,production,n,y,n,both,detection,ns,other,n,n,n,ns,
+R0545,ns,ns,n,y,n,parametric,detection,y,exact,n,n,n,ns,
+R0420,ns,ns,n,y,n,ns,detection,y,exact,n,n,n,ns,exact set cover
+R0468,ns,production,n,y,n,ns,specification,ns,metaheuristic,n,y,n,ns,minimises the probability of misclassification
+R0361,ic,production,n,y,n,ns,detection,y,other,n,n,p,ns,statistical test criterion
+R0367,ic,production,n,y,y,ns,detection,ns,other,n,n,n,ns,
+R0326,ns,ns,y,n,n,ns,specification,y,other,y,n,n,ns,takes random measurement errors into account
+R0337,ns,ns,n,y,n,parametric,detection,y,other,n,n,n,ns,
+R0257,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0264,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0241,ic,production,n,n,y,both,detection,ns,other,p,n,n,ns,minimises production test time
+R0208,ns,production,n,y,n,both,detection,ns,other,n,n,n,ns,
+R0169,ic,production,n,y,n,catastrophic,detection,ns,other,n,n,n,ns,
+R0186,ns,ns,n,y,n,parametric,detection,ns,exact,n,n,n,ns,
+R0123,ns,production,y,n,n,ns,specification,ns,sensitivity,p,n,n,y,minimises test effort and maximises confidence
+R1846,ns,ns,y,n,n,ns,isolation,ns,rl,n,n,n,ns,
+R1833,ns,ns,y,n,n,parametric,detection,ns,ml,n,n,n,ns,
+R1617,ns,design,n,n,n,ns,isolation,y,ml,n,p,n,ns,simulation-based testability analysis with density estimation
+R1496,ns,ns,y,n,n,ns,isolation,y,greedy,n,n,n,ns,
+R1498,ns,ns,y,y,n,ns,isolation,ns,sensitivity,n,n,n,ns,
+R1487,ns,ns,n,y,n,parametric,detection,ns,ml,n,n,n,ns,
+R1431,ns,ns,y,n,n,both,isolation,ns,graph,n,n,n,ns,
+R1432,ns,ns,y,n,n,both,isolation,ns,graph,n,n,n,ns,
+R1393,ns,ns,n,y,n,parametric,identification,y,other,n,n,n,ns,
+R1308,ns,ns,n,n,n,parametric,identification,ns,sensitivity,p,n,n,ns,the effective testability depends on the measurement method
+R1257,ns,ns,y,n,n,parametric,isolation,y,other,n,n,n,ns,
+R1273,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1173,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1201,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1107,board,production,n,y,n,ns,detection,ns,other,p,n,n,ns,test generation for low-cost interface boards
+R1132,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R1142,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1149,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,compares selection strategies
+R0960,ns,ns,n,y,n,parametric,identification,ns,sensitivity,n,n,n,ns,
+R0980,ic,production,n,n,y,ns,specification,y,other,n,y,p,ns,evaluates test measurements with a multivariate normal statistical model
+R1002,ic,production,y,n,n,ns,isolation,y,other,n,n,n,ns,
+R1024,ns,ns,n,y,n,catastrophic,isolation,ns,metaheuristic,n,n,n,ns,
+R0929,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R0950,ns,ns,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R0867,ic,design,y,n,n,ns,detection,ns,other,p,n,n,ns,limits the DfT penalty and the test time
+R0896,ns,ns,n,n,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0750,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0751,ic,production,n,n,y,ns,specification,ns,other,n,n,n,ns,
+R0674,ns,ns,n,n,n,ns,isolation,y,other,n,p,n,ns,splits ambiguity sets by minimum error probability
+R0682,ic,production,n,y,n,ns,detection,y,other,n,n,n,y,
+R0692,ns,ns,n,y,n,parametric,isolation,ns,sensitivity,n,n,n,ns,
+R0632,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0550,ns,ns,n,n,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0551,ns,ns,n,n,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0576,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0605,board,maintenance,y,n,n,ns,isolation,ns,graph,p,n,n,ns,limited physical access on boards
+R0496,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0415,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0444,ic,design,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R0471,ns,ns,n,y,n,catastrophic,detection,ns,sensitivity,n,n,n,ns,
+R0472,ns,ns,n,y,n,catastrophic,detection,ns,sensitivity,n,n,n,ns,
+R0475,ic,design,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R0319,ns,ns,n,y,y,both,detection,ns,exact,n,n,n,ns,
+R0266,ns,maintenance,y,n,n,ns,isolation,y,other,n,n,n,ns,
+R0275,ns,design,y,y,n,both,detection,ns,sensitivity,n,n,n,ns,
+R0170,ns,design,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0090,ns,design,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0082,ns,ns,y,y,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0065,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0051,ns,maintenance,y,n,n,parametric,isolation,y,other,n,n,n,ns,
+R0024,ns,maintenance,y,y,n,ns,isolation,ns,other,n,p,n,ns,uses field failure statistics
+R0026,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0035,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0016,ns,ns,n,y,n,parametric,isolation,ns,greedy,n,n,n,ns,
+R1502,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0953,ic,production,n,y,n,parametric,detection,y,other,n,n,n,ns,
+R0958,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R0589,ns,production,n,y,n,parametric,detection,y,sensitivity,n,n,p,ns,statistical models of the fault-free and the faulty circuit
+R0153,ic,ns,n,y,n,both,detection,ns,other,n,n,n,ns,
+R0018,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0009,ns,ns,y,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R1843,ic,production,n,n,y,ns,specification,ns,ml,p,p,n,ns,adaptive test by information gain and cost
+R1878,ic,production,n,y,n,catastrophic,detection,ns,other,p,n,n,y,
+R1824,ic,production,n,n,y,ns,specification,y,ml,n,n,n,ns,
+R1772,ns,ns,y,n,n,parametric,isolation,ns,rl,n,n,n,ns,
+R1774,ns,ns,n,y,n,ns,isolation,ns,ml,n,n,n,ns,
+R1781,ic,production,n,y,n,catastrophic,detection,ns,other,p,n,n,y,
+R1756,ic,production,n,y,n,catastrophic,detection,ns,other,n,p,n,ns,parts-per-billion escape target
+R2418,ic,production,n,n,y,ns,specification,y,ml,n,n,n,ns,
+R1714,ic,production,n,y,n,ns,detection,ns,ml,n,n,n,ns,
+R1722,ic,production,y,y,y,catastrophic,detection,ns,exhaustive,p,n,n,ns,
+R1698,ns,ns,y,y,n,parametric,detection,ns,other,n,n,n,ns,
+R1667,ic,production,n,n,y,ns,specification,ns,ml,n,n,n,ns,
+R1628,ic,production,n,n,y,ns,specification,y,ml,p,p,n,ns,
+R1582,ic,production,n,n,y,ns,specification,y,ml,p,y,p,ns,adaptive test with escape estimation
+R1592,ns,ns,n,y,n,parametric,detection,y,other,n,n,n,ns,
+R1593,ns,ns,n,y,n,parametric,detection,y,other,n,n,n,ns,
+R1598,ic,production,n,y,n,ns,detection,y,other,p,n,n,ns,
+R1599,ic,production,n,y,n,ns,detection,y,other,p,n,n,ns,
+R1540,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,
+R1568,ic,production,y,y,n,catastrophic,detection,ns,exhaustive,p,n,n,ns,
+R1526,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1447,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1451,board,field,n,y,n,ns,isolation,ns,other,p,n,n,ns,self-test with the ADC and DAC of the microcontroller
+R1475,ns,ns,n,y,n,ns,detection,ns,exact,n,n,n,ns,
+R1410,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1362,ns,ns,n,y,n,ns,detection,ns,exact,n,n,n,ns,
+R1378,ns,ns,n,y,n,ns,detection,ns,exact,n,n,n,ns,
+R1395,board,maintenance,n,y,n,ns,detection,ns,other,n,n,n,ns,optimises the stimulus in in-circuit test
+R1397,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1287,ic,production,n,n,y,ns,specification,y,ml,n,p,n,ns,
+R1288,ic,production,n,n,y,ns,specification,y,other,p,p,n,ns,
+R1328,ns,ns,n,y,n,ns,specification,ns,metaheuristic,n,n,n,ns,
+R1226,ns,ns,n,y,n,parametric,isolation,ns,greedy,n,n,n,ns,
+R1240,ic,production,n,n,y,catastrophic,detection,ns,other,p,p,n,y,reduces test time while maintaining quality (automotive)
+R1243,ns,ns,n,y,n,ns,isolation,y,metaheuristic,n,n,n,ns,
+R1280,ic,production,n,n,y,catastrophic,detection,ns,other,p,p,n,y,reduces test time while maintaining quality (automotive)
+R1284,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R1159,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R1161,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R1166,ic,ns,y,n,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R1036,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1048,ic,production,n,n,y,ns,detection,ns,other,n,n,n,ns,
+R1085,ic,production,n,n,y,ns,specification,ns,exact,n,y,n,y,compaction with pass/fail data; quantifies the wrong predictions
+R1087,ns,ns,n,y,n,parametric,identification,ns,sensitivity,n,n,n,ns,
+R0983,ic,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,few accessible nodes
+R0986,ns,ns,n,y,n,catastrophic,isolation,ns,metaheuristic,n,n,n,ns,
+R0999,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1010,ic,production,n,y,y,ns,detection,y,other,n,n,p,ns,probabilistic fault detection under process variation
+R1017,ns,ns,n,y,n,parametric,identification,ns,sensitivity,n,n,n,ns,
+R0919,ic,production,n,n,y,ns,detection,ns,other,n,n,n,ns,
+R0858,ns,design,y,n,n,parametric,isolation,y,other,n,n,n,ns,
+R0869,ns,ns,n,y,n,ns,isolation,ns,sensitivity,n,n,n,ns,
+R0881,ic,production,n,y,y,ns,detection,y,other,n,n,p,ns,probabilistic fault detection under process variation
+R0884,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R0800,ns,ns,n,y,n,parametric,isolation,ns,metaheuristic,n,n,n,ns,
+R0811,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,test cost metric
+R0819,ic,production,n,y,n,catastrophic,detection,y,other,n,n,p,ns,detection probability metric under process spread
+R0768,ns,ns,n,y,n,ns,isolation,ns,sensitivity,n,n,n,ns,
+R0717,ns,ns,n,y,n,ns,isolation,y,other,n,n,n,ns,
+R0730,ic,production,n,n,y,ns,specification,y,other,p,n,n,ns,
+R0637,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0662,ic,production,n,y,n,parametric,identification,y,other,n,n,n,ns,
+R0592,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R0593,ns,production,n,y,n,ns,specification,ns,other,n,n,n,ns,
+R0601,ns,production,n,y,n,ns,specification,ns,other,n,n,n,ns,
+R0603,ns,ns,n,y,n,parametric,isolation,ns,other,n,n,n,ns,
+R0606,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,
+R0607,ic,design,n,n,y,ns,detection,ns,other,n,n,n,ns,
+R0486,ic,production,n,n,y,both,detection,y,other,p,n,n,ns,distinguishes the test environment from the measuring equipment
+R0519,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0520,board,field,n,n,y,ns,detection,ns,other,p,n,n,y,test under the control of a microcontroller
+R0525,ns,production,n,y,n,ns,isolation,ns,other,p,n,n,ns,
+R0534,ic,production,n,y,n,ns,detection,y,other,p,n,p,ns,accounts for measurement inaccuracy; Monte Carlo
+R0535,ic,production,n,y,n,ns,detection,y,other,p,n,p,ns,accounts for measurement inaccuracy; Monte Carlo
+R0536,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0537,ns,production,n,y,n,parametric,detection,ns,other,n,n,n,ns,
+R0538,ic,production,n,y,n,ns,detection,y,other,n,n,n,ns,
+R0366,ns,ns,n,y,n,both,detection,y,exact,n,n,n,ns,
+R0380,ic,production,n,n,y,parametric,detection,y,other,n,y,n,y,avoids tests for faults that are unlikely according to statistical process simulation
+R0384,ic,production,n,y,n,catastrophic,detection,y,other,n,n,p,ns,detection probability metric under process spread
+R0392,ns,production,n,y,n,ns,isolation,ns,ml,n,n,n,ns,
+R0395,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0396,ic,production,n,n,y,ns,specification,ns,other,p,n,n,y,orders and reduces tests to minimise time
+R0403,ns,production,n,y,n,parametric,specification,ns,other,n,n,n,ns,
+R0298,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0301,ns,ns,n,y,n,parametric,detection,ns,other,n,n,n,ns,
+R0305,ns,ns,n,y,y,both,isolation,ns,exact,n,n,n,ns,
+R0335,ns,ns,n,y,n,parametric,detection,ns,other,n,n,n,ns,
+R0347,ic,production,n,y,n,ns,detection,y,other,n,n,n,ns,
+R0348,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0286,board,production,n,y,n,parametric,detection,y,other,n,n,n,ns,applied to board-level circuits
+R0288,ns,ns,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R0231,ic,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,no abstract
+R0137,ns,production,n,n,y,parametric,detection,ns,other,p,n,n,ns,reduces the functional test set
+R0143,ns,production,y,n,n,ns,specification,ns,sensitivity,n,n,n,y,
+R0114,ic,production,n,n,y,catastrophic,detection,ns,other,p,n,n,ns,wafer test
+R0097,ns,ns,n,y,n,catastrophic,detection,ns,other,n,n,n,ns,
+R0104,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0105,board,production,n,y,y,ns,detection,ns,other,p,n,n,y,optimal settings of the in-circuit test equipment
+R0088,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0074,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0063,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0057,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,no abstract
+R0040,board,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,y,circuit cards
+R0025,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0034,board,maintenance,y,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0037,ns,maintenance,n,y,y,ns,isolation,ns,greedy,n,n,n,ns,
+R0019,ns,maintenance,y,y,n,ns,isolation,ns,other,n,n,n,ns,
+R0011,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1856,ns,production,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1804,ns,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1815,ns,ns,y,n,n,ns,isolation,ns,greedy,n,n,n,ns,
+R1835,ic,production,n,y,n,catastrophic,detection,ns,other,p,y,n,y,coverage weighted by defect probability (IEEE P2427)
+R1504,ic,design,y,n,n,catastrophic,detection,ns,other,p,n,n,ns,
+R1436,ic,production,n,n,y,parametric,specification,y,other,p,y,p,ns,minimises specification tests without exceeding a defect level; Monte Carlo
+R1438,ns,ns,n,y,n,parametric,identification,ns,other,n,n,n,ns,
+R1440,board,field,n,y,n,parametric,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1363,ic,production,n,n,y,ns,specification,y,other,p,n,n,ns,
+R1391,board,field,n,n,y,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1394,ns,ns,n,y,n,parametric,identification,ns,metaheuristic,n,n,n,ns,
+R1323,ns,ns,n,y,n,parametric,detection,ns,metaheuristic,n,n,n,ns,
+R1324,board,field,n,n,y,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1222,ns,ns,n,y,n,parametric,identification,ns,sensitivity,n,n,n,ns,
+R1265,ns,ns,n,y,n,parametric,identification,ns,other,n,n,n,ns,
+R1098,board,field,n,n,y,parametric,isolation,y,other,p,n,n,ns,self-test with the microcontroller's resources; with tolerances
+R1105,ns,ns,y,n,n,ns,isolation,ns,graph,n,n,n,ns,
+R1106,board,field,n,y,n,parametric,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1140,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1092,board,field,n,y,n,both,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0956,board,field,n,y,n,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1019,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,
+R1020,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,
+R1026,board,field,n,y,n,parametric,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1027,board,field,n,y,n,parametric,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0905,board,field,n,n,y,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0906,board,field,n,n,y,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0849,board,field,n,y,n,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0860,ic,production,n,y,n,ns,detection,ns,metaheuristic,n,n,n,ns,
+R0868,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,
+R0886,board,field,n,n,y,ns,isolation,y,other,p,n,n,y,self-test with the microcontroller's resources; with tolerances
+R0787,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0716,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0731,ns,ns,n,n,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0630,ic,production,n,y,y,ns,specification,ns,other,p,n,n,ns,
+R0660,ic,production,n,n,y,ns,detection,ns,other,n,n,n,ns,
+R0571,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0572,ns,ns,n,n,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R0591,ic,production,n,n,y,ns,detection,ns,other,n,p,n,ns,fault coverage and yield coverage
+R0598,ns,ns,n,n,n,parametric,identification,ns,symbolic,n,n,n,ns,
+R0529,ic,production,n,n,y,catastrophic,detection,ns,exact,p,n,n,ns,maximum coverage at minimum cost
+R0412,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0416,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0421,ns,design,n,n,n,ns,isolation,y,other,n,n,p,ns,testability metrics by fault simulation
+R0470,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0477,ns,design,n,n,n,ns,isolation,y,other,n,n,y,ns,studies the minimum number of Monte Carlo runs and the measurement thresholds
+R0383,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0296,ic,design,y,n,n,ns,detection,ns,other,p,n,n,ns,selects accessible nodes
+R0299,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0306,ns,maintenance,n,n,y,ns,isolation,ns,other,n,n,n,ns,plans tests by reasoning about the measurements
+R0322,ns,ns,y,y,n,ns,detection,ns,sensitivity,n,n,n,ns,
+R0328,ns,ns,n,y,n,ns,detection,ns,sensitivity,n,n,n,ns,
+R0278,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R0229,ic,ns,n,n,n,ns,identification,ns,other,n,n,n,y,
+R0242,ns,ns,y,y,n,ns,detection,ns,sensitivity,n,n,n,ns,
+R0198,ns,ns,y,n,n,ns,isolation,ns,exact,n,n,n,ns,
+R0179,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0145,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0147,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0159,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0133,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,no abstract
+R0099,ns,ns,n,n,n,ns,identification,ns,graph,n,n,n,ns,
+R0106,ns,ns,n,n,y,ns,identification,y,other,p,n,p,ns,testability with statistical methods and accuracy of the estimate
+R0085,ic,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0066,ns,maintenance,y,n,n,catastrophic,isolation,ns,other,n,n,n,ns,
+R0069,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0070,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0064,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0058,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,no abstract
+R0049,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0050,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0012,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1541,ns,ns,n,n,n,parametric,identification,ns,other,n,n,n,ns,
+R1500,ns,ns,n,n,n,parametric,identification,ns,other,n,n,n,ns,
+R1244,board,field,n,y,n,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R1271,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,ECG amplifier
+R1120,board,field,n,y,n,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0740,ns,ns,n,n,y,ns,detection,ns,exact,n,n,n,ns,
+R0587,ic,production,n,n,y,both,detection,ns,exact,p,n,n,ns,maximum coverage at minimum cost
+R0528,ic,production,n,n,y,both,detection,ns,exact,p,n,n,ns,maximum coverage at minimum cost
+R0190,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0154,ic,ns,n,y,n,both,detection,ns,other,n,n,n,ns,
+R0144,ns,ns,y,n,n,ns,identification,ns,other,n,n,n,ns,
+R0108,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0117,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0059,ns,design,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0060,ns,design,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0055,ns,design,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R1830,ns,ns,y,n,n,parametric,detection,ns,sensitivity,n,n,n,ns,
+R1778,ns,ns,n,n,n,parametric,identification,ns,other,n,n,n,ns,
+R2344,ic,production,n,n,y,ns,specification,ns,ml,p,n,n,ns,
+R2172,ns,production,n,y,n,ns,specification,ns,metaheuristic,p,n,n,ns,
+R2115,ic,production,n,y,n,ns,detection,ns,other,p,n,n,ns,
+R2116,ns,maintenance,y,y,n,parametric,isolation,ns,other,n,n,n,ns,"chooses excitation nodes, source values and measurement nodes"
+R1505,ns,ns,y,n,n,parametric,isolation,ns,metaheuristic,n,n,n,ns,
+R1514,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1534,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,
+R1538,ic,production,n,n,y,ns,specification,y,other,p,p,n,y,chooses the test flow per wafer without compromising quality
+R2096,ic,production,n,y,n,ns,detection,ns,other,p,n,n,ns,
+R2108,ic,design,y,n,n,catastrophic,detection,ns,graph,n,n,n,ns,
+R1464,ic,production,n,n,y,ns,specification,ns,exact,p,y,n,ns,integer linear program that removes tests without exceeding the defect level
+R1405,ns,ns,y,n,n,parametric,isolation,ns,metaheuristic,n,n,n,ns,
+R1374,ic,production,y,n,n,ns,detection,ns,sensitivity,n,n,n,y,
+R2045,ns,ns,y,n,n,ns,isolation,ns,other,n,n,n,ns,
+R1290,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,test ordering at production ramp-up
+R2024,ns,ns,y,n,n,catastrophic,isolation,ns,metaheuristic,n,n,n,ns,
+R1285,board,field,n,n,y,ns,detection,ns,other,p,n,n,ns,self-test with the microcontroller's resources (MSP430; cited in the proposal)
+R2015,ns,ns,n,y,n,ns,isolation,y,other,n,n,n,ns,
+R1995,ns,ns,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1111,ic,production,n,n,y,ns,detection,ns,other,p,p,n,ns,defect-oriented test optimisation for near-zero DPPM
+R1083,ns,ns,n,y,n,parametric,isolation,ns,other,n,n,n,ns,
+R0978,board,field,n,n,y,ns,isolation,ns,other,p,n,n,ns,self-test with the microcontroller's resources
+R0783,ic,production,y,n,n,ns,detection,ns,other,n,n,n,ns,
+R1933,board,production,y,n,n,ns,detection,y,other,n,n,n,ns,diagnosis of interface boards with measurements at selected points
+R0502,ns,production,n,y,n,ns,detection,ns,other,y,p,n,ns,test equipment noise causes false rejects and test escapes
+R0447,ic,production,n,n,y,ns,specification,ns,other,n,p,n,ns,fault coverage and yield coverage as a function of the decision threshold
+R0466,ic,production,n,n,y,ns,detection,y,other,n,y,p,ns,Bayes' rule with prior probabilities to choose measurements
+R1910,ic,production,n,n,y,both,detection,y,other,y,n,n,ns,accounts for ADC quantisation noise
+R0357,ic,production,n,n,y,ns,specification,ns,other,n,n,n,ns,
+R1906,ns,production,n,n,y,ns,specification,ns,sensitivity,n,n,n,ns,
+R0185,ns,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0084,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0005,ns,maintenance,n,y,n,ns,isolation,ns,other,n,n,n,ns,
+R1749,ic,production,n,y,n,catastrophic,detection,ns,other,n,n,n,ns,
+R2073,ic,production,n,n,y,ns,specification,ns,ml,p,p,n,ns,
+R1314,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,
+R1957,ic,production,n,n,y,ns,specification,ns,ml,p,p,n,y,
+R0777,ic,production,n,y,n,ns,detection,y,other,n,n,n,ns,
+R1761,ns,ns,n,n,y,parametric,isolation,ns,other,n,n,n,ns,
+R2155,board,maintenance,y,y,n,ns,isolation,ns,sensitivity,n,n,n,ns,excitation and measurement points on a board
+R2012,ns,ns,n,y,n,parametric,identification,y,other,n,n,n,ns,
+R1996,ic,production,n,n,y,ns,specification,ns,metaheuristic,p,p,n,y,
+R1138,ic,production,n,n,y,ns,specification,ns,ml,p,p,n,y,
+R1139,ns,ns,y,n,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1049,ic,production,n,n,y,ns,specification,ns,ml,p,p,p,y,estimates the confidence of each prediction when compacting tests
+R1964,ic,production,n,n,y,ns,specification,ns,other,p,n,n,ns,
+R0509,ns,ns,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R0073,ic,production,n,n,y,ns,specification,ns,sensitivity,p,n,n,y,
+R1575,board,field,y,n,n,ns,isolation,ns,other,n,n,n,ns,testability design of board circuits
+R1269,ns,ns,n,y,n,parametric,isolation,ns,greedy,n,n,n,ns,
+R1949,ns,ns,n,n,n,ns,identification,ns,symbolic,n,n,n,ns,
+R0032,ns,ns,y,y,n,ns,identification,ns,sensitivity,n,n,n,ns,
+R2138,ic,production,n,n,y,ns,specification,ns,other,p,p,n,ns,
+R1473,ic,production,n,y,n,ns,detection,ns,other,n,n,n,ns,
+R1212,ns,ns,n,y,n,parametric,identification,ns,other,n,n,n,ns,
+R1213,ns,ns,n,y,n,parametric,isolation,y,metaheuristic,n,n,n,ns,
+R1983,ic,production,n,n,y,ns,specification,ns,ml,p,p,n,y,
+R1009,ns,ns,n,y,n,ns,isolation,ns,metaheuristic,n,n,n,ns,
+R1950,ic,production,n,n,y,ns,specification,ns,ml,p,y,n,y,minimises test cost while limiting yield loss
+R1734,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R1659,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R1620,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0156,ns,ns,n,n,n,ns,identification,ns,graph,n,n,n,ns,
+R0061,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R0047,ns,ns,n,n,n,ns,identification,ns,other,n,n,n,ns,
+R2091,ic,production,n,n,y,ns,specification,ns,ml,p,n,n,ns,
+R2100,ic,production,n,n,y,ns,specification,y,other,p,p,n,ns,
+R1986,ns,ns,n,n,y,ns,detection,ns,metaheuristic,n,n,n,ns,doubtful relevance: selection of sensor measurements
+R1943,ic,production,n,y,y,ns,specification,ns,other,p,n,n,ns,
+R0028,ns,ns,y,n,n,ns,identification,ns,sensitivity,n,n,n,ns,

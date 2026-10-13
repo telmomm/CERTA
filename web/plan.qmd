@@ -1,0 +1,33 @@
+---
+title: "Work plan"
+description: "Work packages, milestones and experiments."
+---
+
+The project is organised in five work packages. Each one ends at a milestone that decides how the next one continues.
+
+## Work packages
+
+| Package | What it does | Milestone | Status |
+| --- | --- | --- | --- |
+| **WP0** State of the art | Systematic review in Scopus, IEEE Xplore and Web of Science | G0: the gap exists | [In progress]{.tag .in-progress} |
+| **WP1** Benchmark and certification | Reimplemented reference methods, intervals and adaptive Monte Carlo | G1: the reimplemented methods reproduce the published figures | [Pending]{.tag} |
+| **WP2** Formulation and algorithms | Cost model, risk weighting, selection algorithms and theoretical bound | G2: the greedy algorithm stays close to the optimum and risk changes the selection | [Pending]{.tag} |
+| **WP3** Board validation | Two boards with fault injection and self-test firmware | G3: the simulated ranking holds on the board | [Pending]{.tag} |
+| **WP4** Biomedical application | ECG front end and Howland source with severities according to IEC 60601 | — | [Pending]{.tag} |
+
+: {tbl-colwidths="[24,34,28,14]"}
+
+The tasks of each package and their estimated duration are in the [ROADMAP](https://github.com/telmomm/CERTA/blob/main/ROADMAP.md) of the repository.
+
+## Experiments
+
+| Id | Question |
+| --- | --- |
+| E1 | Do the reimplemented methods reproduce the published figures? |
+| E2 | How far is the greedy algorithm from the exact optimum? |
+| E3 | What does optimising node, stimulus and measurement at once add? |
+| E4 | Does the solution change when weighting by risk? |
+| E5 | How many Monte Carlo runs are needed for the rankings to be stable? |
+| E6 | Do the tests chosen in simulation hold in hardware? |
+
+: {tbl-colwidths="[10,90]"}

@@ -1,0 +1,179 @@
+/*-- scss:defaults --*/
+
+// Palette of docs/assets/visual-identity.png
+$navy: #0B2D4A;
+$teal: #00BFA5;
+$blue: #00AEEF;
+$sky: #A7E3F7;
+$ice: #E6EEF6;
+$night: #071E33;
+
+$primary: $navy;
+$secondary: $teal;
+$body-color: #1B2B3A;
+$link-color: #0A6FB8;
+$font-family-sans-serif: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 600;
+$headings-color: $navy;
+
+$navbar-bg: #fff;
+$navbar-fg: $navy;
+$navbar-hl: $teal;
+$footer-bg: $night;
+$footer-fg: $ice;
+
+/*-- scss:rules --*/
+
+.navbar {
+  border-bottom: 1px solid $ice;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+h2 {
+  border-bottom: 0;
+  margin-top: 2.5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    margin-top: .5rem;
+    background: $teal;
+  }
+}
+
+.nav-footer a {
+  color: $sky;
+}
+
+// --- Home page -------------------------------------------------------------
+
+.hero {
+  margin-bottom: 3rem;
+  padding: 4rem 1.5rem;
+  border-radius: .75rem;
+  background: $night center / cover no-repeat;
+  color: #fff;
+
+  img {
+    width: min(26rem, 100%);
+    margin-bottom: 1.5rem;
+  }
+
+  .tagline {
+    max-width: 40rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .lead-text {
+    max-width: 40rem;
+    color: $ice;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    margin: 1rem .5rem 0 0;
+  }
+
+  .btn-primary {
+    border-color: $teal;
+    background: $teal;
+    color: $night;
+    font-weight: 600;
+  }
+
+  .btn-outline-light:hover {
+    color: $night;
+  }
+}
+
+.pillars {
+  margin: 1.5rem 0 2.5rem;
+
+  .pillar {
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid $ice;
+    border-radius: .75rem;
+    background: #fff;
+
+    img {
+      width: 3rem;
+      margin-bottom: .75rem;
+      border-radius: .5rem;
+    }
+
+    h3 {
+      margin: 0 0 .25rem;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: .95rem;
+    }
+  }
+}
+
+.status {
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid $teal;
+  border-radius: .5rem;
+  background: $ice;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.divider {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+// --- Inner pages -----------------------------------------------------------
+
+.table {
+  font-size: .95rem;
+
+  thead {
+    border-bottom: 2px solid $navy;
+    color: $navy;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: .1rem .6rem;
+  border-radius: 1rem;
+  background: $ice;
+  color: $navy;
+  font-size: .8rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &.in-progress {
+    background: $teal;
+    color: $night;
+  }
+}
+
+.draft {
+  padding: .75rem 1rem;
+  border: 1px dashed $blue;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  color: #56687A;
+  font-size: .95rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

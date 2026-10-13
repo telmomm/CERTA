@@ -1,0 +1,29 @@
+---
+title: "Team"
+description: "Who is behind CERTA and how to collaborate."
+toc: false
+---
+
+## Principal investigator
+
+::: {.draft}
+Pending: name, affiliation, short bio and links (ORCID, institutional page).
+:::
+
+[\@telmomm on GitHub](https://github.com/telmomm)
+
+## Collaborators
+
+::: {.draft}
+Pending: collaborating people and institutions, with their logos.
+:::
+
+## Funding
+
+::: {.draft}
+Pending: funding body and project reference, if applicable.
+:::
+
+## Contact {#contact}
+
+For questions, collaboration proposals or comments on the review protocol, the most direct route is to open an [issue in the repository](https://github.com/telmomm/CERTA/issues).

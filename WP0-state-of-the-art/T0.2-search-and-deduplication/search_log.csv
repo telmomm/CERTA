@@ -1,0 +1,5 @@
+date,database,query,string,filters,results,export_file
+2026-10-12,Scopus,main,search-strings.md,none,1380,Scopus/export_9f7be14a-389f-4fcd-8f33-aeb06316102e_2026-10-12T215430.10166074.csv
+2026-10-12,Web of Science Core Collection,main,search-strings.md,none,801,WOS/savedrecs-2.xls
+2026-10-12,IEEE Xplore,X1,search-strings.md,none,545,IEEE/X1/export2026.10.12-17.28.25.csv
+2026-10-12,IEEE Xplore,X2,search-strings.md,none,488,IEEE/X2/export2026.10.12-17.29.47.csv

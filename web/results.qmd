@@ -1,0 +1,29 @@
+---
+title: "Results"
+description: "Publications, software and data of the project."
+---
+
+The project works in the open: the protocols, the data and the code are published in the [repository](https://github.com/telmomm/CERTA) as they are produced.
+
+## Publications
+
+::: {.draft}
+There are no publications yet. They will be listed here with their DOI and preprint.
+:::
+
+## Software
+
+The main outcome is `spicefault.testdesign`, a module that generates the self-test plan and its coverage from a netlist. Each release will be deposited with a DOI so that the papers cite the exact code they use.
+
+::: {.draft}
+First public release planned for the close of WP1.
+:::
+
+## Data
+
+| Resource | Contents | Status |
+| --- | --- | --- |
+| [Review protocol](https://github.com/telmomm/CERTA/tree/main/WP0-state-of-the-art/T0.1-protocol) | Questions, search strings, screening criteria and extraction form | [Available]{.tag .in-progress} |
+| [Review corpus](https://github.com/telmomm/CERTA/tree/main/WP0-state-of-the-art) | Records, screening decisions and the notebooks that generate them | [In progress]{.tag} |
+| Benchmark | Benchmark circuits, fault universe and reimplemented methods | [Pending]{.tag} |
+| Dataset | Simulations and board measurements with fixed splits | [Pending]{.tag} |

@@ -1,0 +1,87 @@
+R1843	https://doi.org/10.1109/tvlsi.2026.3665483
+R1853	https://doi.org/10.1109/ets69887.2026.11591724
+R1835	https://doi.org/10.1109/itc58126.2025.00006
+R1628	https://doi.org/10.1145/3308566
+R2155	https://doi.org/10.1109/icece48499.2019.9058507
+R2138	https://doi.org/10.1109/vts.2018.8368662
+R1540	https://doi.org/10.1109/vts.2017.7928919
+R1575	https://doi.org/10.1109/phm.2017.8079296
+R1534	https://doi.org/10.1109/tcad.2016.2547904
+R1538	https://doi.org/10.1109/vts.2016.7477263
+R2100	https://doi.org/10.1109/test.2016.7805835
+R1451	no DOI: An idea of an approach to self-testing of mixed signal systems based on a quadratic function stimulation
+R1456	https://doi.org/10.1007/978-3-319-09507-3_138
+R1464	https://doi.org/10.1007/s10836-015-5545-1
+R2073	https://doi.org/10.7873/date.2015.0233
+R1406	https://doi.org/10.4028/www.scientific.net/amm.568-570.3
+R1440	no DOI: Testing method of analog parts for mixed signal microsystems based on microcontrollers
+R1384	https://doi.org/10.1109/tvlsi.2012.2205027
+R1391	https://doi.org/10.1109/tim.2013.2272867
+R1395	https://doi.org/10.1109/icmtma.2013.273
+R1288	https://doi.org/10.1109/ets.2012.6233010
+R1290	https://doi.org/10.1109/vts.2012.6231075
+R1314	no DOI: Innovation Center RFuna
+R1324	https://doi.org/10.1109/i2mtc.2012.6229200
+R1330	https://doi.org/10.1109/tcad.2011.2181846
+R1240	https://doi.org/10.1109/test.2011.6139127
+R1244	https://doi.org/10.1016/j.microrel.2011.02.022
+R1280	https://doi.org/10.1109/date.2011.5763065
+R1285	no DOI: Ultra low-cost configurability test strategy for an embedded analog circuit
+R1157	https://doi.org/10.1109/test.2010.5699271
+R1202	https://doi.org/10.1109/vts.2010.5469546
+R1996	https://doi.org/10.1109/tvlsi.2009.2017196
+R1098	https://doi.org/10.1016/j.measurement.2009.01.014
+R1106	no DOI: A simple fault diagnosis method for analog parts of electronic embedded systems
+R1107	https://doi.org/10.1109/test.2009.5355836
+R1111	https://doi.org/10.1109/iccd.2009.5413139
+R1120	no DOI: Fault diagnosis of fully differential circuits in electronic embedded systems
+R1138	https://doi.org/10.1007/s10836-009-5113-7
+R1973	https://doi.org/10.1145/1629911.1630098
+R1983	https://doi.org/10.1109/vts.2009.59
+R1049	https://doi.org/10.1109/ets.2008.31
+R1086	https://doi.org/10.1109/iccd.2008.4751867
+R1088	https://doi.org/10.1109/autest.2008.4662605
+R1092	https://doi.org/10.1109/tim.2008.925342
+R0956	https://doi.org/10.1016/j.measurement.2006.07.015
+R0978	https://doi.org/10.1109/imtc.2007.379087
+R0980	https://doi.org/10.1109/date.2007.364682
+R0993	https://doi.org/10.1109/dtis.2007.4449488
+R1026	no DOI: Using a square-wave signal for fault diagnosis of analog pants of mixed-signal embedded systems controlled by microcontrollers
+R1027	https://doi.org/10.1109/imtc.2007.379196
+R1957	https://doi.org/10.1109/vts.2007.41
+R0905	https://doi.org/10.1109/imtc.2006.235517
+R0906	https://doi.org/10.1109/imtc.2006.328453
+R1950	https://doi.org/10.1109/mdt.2006.154
+R0849	no DOI: About fault diagnosis methods of analog electronic circuits based on the time response to a square impulse and identification curves in multidimensional spaces
+R0886	no DOI: Implementation of an input-output method of diagnosis of analog electronic circuits in embedded systems
+R1933	no DOI: Automatic Diagnostic Program Generation for Mixed Signal Load Board
+R0605	https://doi.org/10.1109/82.877140
+R0502	https://doi.org/10.1023/a:1008343108840
+R0520	https://doi.org/10.1109/icecs.1999.814491
+R0534	https://doi.org/10.1109/test.1999.805635
+R0535	no DOI: Speed-up of high accurate analog test stimulus optimization
+R0466	https://doi.org/10.1109/43.720321
+R0356	https://doi.org/10.1109/test.1997.639675
+R0286	https://doi.org/10.1109/cicc.1995.518237
+R0105	no DOI: Parameter design solutions for analog in-circuit testing problems.
+R0106	https://doi.org/10.1109/test.1988.207870
+R0040	no DOI: AUTOMATIC TEST PROGRAM GENERATION FOR ANALOG CIRCUITS: INITIAL SUCCESS IN DEMONSTRATING A NEW APPROACH.
+R0034	no DOI: FAULT ISOLATION IN ANALOG SYSTEMS USING GO-NO-GO TESTING.
+R1846	https://doi.org/10.1016/j.engappai.2025.113294
+R1796	https://doi.org/10.1109/tim.2025.3588964
+R1715	https://doi.org/10.1007/s10470-022-02039-6
+R1617	https://doi.org/10.1109/tcad.2017.2762647
+R1625	https://doi.org/10.1155/2018/9714206
+R1271	https://doi.org/10.1109/ecctd.2011.6043396
+R1104	https://doi.org/10.1109/tim.2008.2006725
+R0987	https://doi.org/10.1109/tcsii.2006.884112
+R0812	https://doi.org/10.1109/tim.2004.827085
+R0819	https://doi.org/10.1023/b:jett.0000009310.48706.b7
+R0750	https://doi.org/10.1109/tcsi.2003.809811
+R0590	https://doi.org/10.1109/iccad.2000.896532
+R0592	https://doi.org/10.1109/19.893273
+R0496	https://doi.org/10.1109/81.774222
+R0528	https://doi.org/10.1109/etw.1999.804430
+R0241	https://doi.org/10.1109/43.285252
+R0066	https://doi.org/10.1002/cta.4490130205
+R0024	https://doi.org/10.1109/tcs.1979.1084665

@@ -1,0 +1,15 @@
+item,records
+Scopus,1380
+Web of Science,801
+IEEE Xplore X1,545
+IEEE Xplore X2,488
+Tracking: backward citations,0
+Tracking: forward citations,692
+Tracking: author,422
+Total identified,4328
+"Removed: no authors (front matter, proceedings, standards)",74
+Removed: document type (tracking),7
+Removed: duplicates,1615
+Corpus for screening,2632
+"  of which, from the database searches",1882
+"  of which, from tracking only",750

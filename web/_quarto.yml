@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: assets.py
+  resources:
+    - assets/
+
+lang: en
+
+website:
+  title: "CERTA"
+  description: "Certified, Embedded, Risk-aware Test design for Analog circuits. A research project on the self-diagnosis of analog electronics at board level."
+  site-url: https://telmomm.github.io/CERTA/
+  repo-url: https://github.com/telmomm/CERTA
+  favicon: assets/logo/certa-favicon.png
+  image: assets/banners/certa-banner-social.png
+  open-graph: true
+  page-navigation: false
+  navbar:
+    logo: assets/logo/certa-mark.png
+    logo-alt: "CERTA logo mark"
+    left:
+      - text: "Project"
+        href: project.qmd
+      - text: "Work plan"
+        href: plan.qmd
+      - text: "Results"
+        href: results.qmd
+      - text: "Team"
+        href: team.qmd
+    right:
+      - icon: github
+        href: https://github.com/telmomm/CERTA
+        aria-label: "Repository on GitHub"
+  page-footer:
+    left: "CERTA · Research project"
+    right:
+      - text: "Repository"
+        href: https://github.com/telmomm/CERTA
+      - text: "Contact"
+        href: team.qmd#contact
+
+format:
+  html:
+    theme: [cosmo, certa.scss]
+    toc: true
+    toc-title: "On this page"
+    link-external-newwindow: true
+    smooth-scroll: true

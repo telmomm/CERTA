@@ -1,0 +1,41 @@
+---
+title: "The project"
+description: "What problem CERTA addresses and what it proposes."
+---
+
+## Motivation
+
+An electronic device that diagnoses itself in the field has only what it carries on board: a few ADC channels, a DAC and the computing time of its microcontroller. Deciding what to measure with those resources is a test design problem.
+
+The literature has treated it mostly as node selection to isolate every fault class, evaluated in simulation on a handful of benchmark filters. That leaves unanswered the questions that matter in a real device: how much each measurement costs, which faults are the severe ones and with what confidence the coverage is known.
+
+## From the state of the art to the proposal
+
+| Shortcoming in the literature | What CERTA proposes |
+| --- | --- |
+| Nodes, stimuli and measurements are optimised separately | Joint design of node, stimulus and measured feature |
+| Cost is a count of nodes | A cost model of the embedded hardware: channels, switches, ADC noise and resolution |
+| All fault classes weigh the same | Coverage weighted by fault probability and severity, with a bounded false alarm rate |
+| Percentages without uncertainty, from few Monte Carlo runs | Coverage with confidence intervals and adaptive Monte Carlo |
+| No theoretical bound and no reproducible comparison | Gap to the ambiguity groups and an open benchmark of reimplemented methods |
+
+## What you get
+
+From the netlist of a circuit and the description of the measurement hardware available, the tool returns:
+
+- the **self-test plan**: which channel is measured, with which stimulus and with which thresholds;
+- its **coverage**, with a confidence interval and weighted by the risk of each fault;
+- the **distance to the theoretical bound** of what that circuit allows to be diagnosed.
+
+The plan is exported in a format that the device firmware can run directly.
+
+## Where it is validated
+
+| Circuit | Role |
+| --- | --- |
+| Sallen-Key band-pass, biquad and leapfrog low-pass | Benchmark: they allow comparison with published figures |
+| ECG front end | Biomedical application |
+| Howland current source | Biomedical application: faults with an impact on patient safety |
+| Bridge or thermistor conditioning | Generic industrial case |
+
+Validation includes two boards with fault injection, measured with the ADC and DAC of a microcontroller.
