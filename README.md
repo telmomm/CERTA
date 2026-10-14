@@ -54,6 +54,7 @@ The tasks of each package and their estimated duration are in [ROADMAP.md](ROADM
 | [ROADMAP.md](ROADMAP.md) | Tasks, deliverables and estimated duration |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to work in the repository: notebooks, data, documents and commits |
 | [docs/assets/](docs/assets/) | Visual identity |
+| [docs/templates/](docs/templates/) | Templates for documents, notebooks, Word and PowerPoint, with the project header, footer and logo |
 | [web/](web/) | Project website, built with Quarto. Preview with `quarto preview web` |
 
 ## Getting started

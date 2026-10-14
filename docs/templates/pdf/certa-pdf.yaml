@@ -1,0 +1,22 @@
+# Pandoc defaults for CERTA documents. From the repository root:
+#   pandoc path/to/document.md -d docs/templates/pdf/certa-pdf.yaml -o path/to/document.pdf
+from: markdown
+pdf-engine: xelatex
+filters:
+  - ${.}/certa.lua
+number-sections: true
+variables:
+  documentclass: article
+  papersize: a4
+  geometry:
+    - margin=2.4cm
+    - top=2.8cm
+    - headsep=0.7cm
+  fontsize: 10pt
+  linestretch: 1.2
+  mainfont: Avenir Next
+  monofont: Menlo
+  colorlinks: true
+  linkcolor: certablue
+  urlcolor: certablue
+  citecolor: certablue
