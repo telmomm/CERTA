@@ -9,7 +9,7 @@ lang: en
 
 website:
   title: "CERTA"
-  description: "Certified, Embedded, Risk-aware Test design for Analog circuits. A research project on the self-diagnosis of analog electronics at board level."
+  description: "Certified, Embedded, Risk-aware Test design for Analog circuits. A research project on self-test for analog electronics with diagnostic coverage computed and certified for functional safety."
   site-url: https://telmomm.github.io/CERTA/
   repo-url: https://github.com/telmomm/CERTA
   favicon: assets/logo/certa-favicon.png

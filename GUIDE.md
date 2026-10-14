@@ -1,14 +1,26 @@
-# Optimal test selection for analog self-diagnosis: state of the art, gap and proposal
+# Certified self-test for analog electronics: state of the art, gap and proposal
 
 Oct 12, 2026 · @TelmoMM
 
 ## Summary
 
-There is a gap, but not in the optimiser: it is in the formulation. Analog test point selection has been studied for 40 years and is now saturated with metaheuristics and reinforcement learning applied to the same benchmark filters.
+Functional safety standards require every safety-related product to declare the diagnostic coverage of its hardware. For analog parts that figure is taken today from generic tables, with conservative margins and no uncertainty. CERTA computes it instead: it chooses what an embedded system should measure to reach the coverage that the safety level requires at minimum hardware cost, and it reports that coverage with a confidence interval that can be used as evidence in the safety analysis.
 
-What nobody brings together is a test design that (1) optimises nodes, stimuli and type of measurement at the same time, (2) with a realistic cost model of what a microcontroller can measure in the field, (3) weighted by the probability and severity of the fault instead of "isolating every class", (4) with statistically certified coverage and (5) compared against the theoretical bound of the ambiguity groups.
+On the research side there is a gap, but not in the optimiser: it is in the formulation. Analog test point selection has been studied for 40 years and is now saturated with metaheuristics and reinforcement learning applied to the same benchmark filters. What nobody brings together is a test design that (1) optimises nodes, stimuli and type of measurement at the same time, (2) with a realistic cost model of what a microcontroller can measure in the field, (3) weighted by the probability and severity of the fault instead of "isolating every class", (4) with statistically certified coverage, aligned with the metrics of the standards, and (5) compared against the theoretical bound of the ambiguity groups.
 
-Proposal: a test design module in spicefault that solves that problem for discrete circuits at board level, with an open benchmark of reimplemented baselines and validation in hardware. Natural target: IEEE Transactions on Reliability or IEEE Transactions on Instrumentation and Measurement.
+Proposal: a test design module in spicefault that solves that problem for discrete circuits at board level and exports its result to the FMEDA, with an open benchmark of reimplemented baselines, validation on simple boards and a lead demonstrator, the measurement chain of a battery management system, taken through a mock safety assessment against the table-based FMEDA. Natural targets: IEEE Transactions on Reliability, Reliability Engineering & System Safety or IEEE Transactions on Instrumentation and Measurement.
+
+## Motivation: diagnostic coverage in functional safety
+
+Safety standards turn the detection of faults into a number that decides whether a product can be certified:
+
+| Standard | Field | Coverage metric | Targets |
+| --- | --- | --- | --- |
+| IEC 61508 | Industrial, generic | Diagnostic coverage DC and safe failure fraction SFF | DC low ≥ 60 %, medium ≥ 90 %, high ≥ 99 %; SFF and hardware fault tolerance set the achievable SIL |
+| ISO 26262 | Road vehicles, including traction batteries | Single-point fault metric SPFM and latent fault metric LFM | ASIL B: SPFM ≥ 90 %, LFM ≥ 60 %; ASIL C: ≥ 97 %, ≥ 80 %; ASIL D: ≥ 99 %, ≥ 90 % |
+| IEC 60601-1 with ISO 14971 | Medical electrical equipment | No single coverage figure: safety under single fault condition and risk control measures | Each hazardous fault must be detected or made safe |
+
+For digital logic, coverage can be computed by fault simulation. For analog parts the usual practice is to credit each diagnostic technique (a range check, a comparison between two channels, a test pulse) with the coverage that the tables of the standard allow it, low, medium or high, without simulating what the technique actually detects in that circuit. The result is conservative and unverifiable: designs add diagnostic hardware to reach a figure that nobody has measured. IEEE 2427 points in the right direction, coverage computed by simulation as a statistical estimate, but for integrated circuits.
 
 ## State of the art
 
@@ -53,6 +65,8 @@ There are strategies that use only the resources of the microcontroller (ADC, in
 
 [IEEE 2427-2025](https://standards.ieee.org/ieee/2427/7233/) defines the defect universe, detectability and statistical coverage from simulation. Its working group justifies the standard by the lack of compatible definitions of coverage ([IEEE P2427 WG](https://sagroups.ieee.org/2427)). It is intended for ICs, not for boards with discrete components.
 
+In functional safety, IEC 61508-2 (Annex A) and ISO 26262-5 (Annex D) list diagnostic techniques with the maximum coverage they can be credited with. They give an upper bound per technique, not a figure computed for a specific circuit.
+
 ## Comparison
 
 No family covers more than two or three criteria at once; the proposal column is the only one that brings them together.
@@ -62,22 +76,23 @@ No family covers more than two or three criteria at once; the proposal column is
 | Selects nodes | Yes | Indirectly | No | Yes | No | Ad hoc | Yes |
 | Selects stimulus and type of measurement | No | No | Yes | Rarely | Subset of specs | Ad hoc | Yes, jointly |
 | Realistic measurement cost | Node count | No | No | Abstract cost | Tester time | Implicit | Embedded hardware model |
-| Objective | Isolate classes | Identifiability | Separate classes | Isolate classes | Escape and yield loss | Detect | Risk-weighted coverage + specifications |
+| Objective | Isolate classes | Identifiability | Separate classes | Isolate classes | Escape and yield loss | Detect | Coverage target of the safety level at minimum cost |
 | Tolerances | Fixed threshold or normal | Ignored | Partial | Small Monte Carlo | Large Monte Carlo | Empirical | Large Monte Carlo |
 | Confidence intervals | No | Not applicable | No | No | Yes (ppm) | No | Yes |
 | Theoretical bound as reference | No | It is the bound | No | No | No | No | Yes (ambiguity groups) |
 | Open code and data | No | In-house programs | No | No | Industrial data | No | Yes |
-| Evaluation circuits | Benchmark filters | Small filters | Filters | Benchmark filters | ICs, MEMS | Specific MCU | Filters + three application cases |
+| Evaluation circuits | Benchmark filters | Small filters | Filters | Benchmark filters | ICs, MEMS | Specific MCU | Filters + safety demonstrator (battery management system) + two secondary cases |
 
 ## Identified gap
 
-The gap is the combination of five shortcomings, each documented in the literature reviewed. Taken separately, some are solved in another field; together, and at board level, they are not.
+The gap is the combination of five shortcomings, each documented in the literature reviewed, plus one in industrial practice. Taken separately, some are solved in another field; together, and at board level, they are not.
 
 1. **Nodes, stimuli and measurements are optimised separately in the recent literature.** Families 1 and 4 choose nodes with the stimulus fixed; family 3 chooses stimuli with the node fixed. An embedded system decides all three at once: which ADC channel, which signal its DAC injects and which feature it extracts.
 2. **The cost does not reflect the hardware.** What is counted is the number of nodes or an abstract cost. In the field the cost is something else: a free ADC channel is almost free, a node that needs a switch or an extra pin is not, and the ADC resolution limits which differences are detectable.
 3. **The objective is to isolate all classes equally.** A short circuit in the blocking capacitor of an applied part does not weigh the same as a 5 % drift in an anti-aliasing filter. Weighting by fault probability and severity of the effect is missing, as FMEDA and ISO 14971 do, as is including the false alarm rate, as IC test compaction does.
 4. **The metrics carry no uncertainty.** With 50 to 120 Monte Carlo runs per fault, percentages are published without intervals. IEEE 2427 already requires coverage to be treated as a statistical estimate, but only for ICs.
 5. **There is no theoretical reference and no reproducible comparison.** Data-driven methods ignore the bound given by the ambiguity groups, so nobody knows how far a solution is from the achievable optimum. And each paper compares against two or three methods on its own data, without code.
+6. **In practice, analog diagnostic coverage is credited, not computed.** Safety analyses take it from the tables of the standards, so the research on test selection never reaches the FMEDA, and the FMEDA never benefits from it.
 
 The gap is not "another optimiser". The defensible novelty is a new formulation of the problem plus an open tool that allows the existing optimisers to be compared within it.
 
@@ -115,11 +130,11 @@ Conclusion for the paper: joint optimisation of node and stimulus is not new in 
 
 ## Proposal: formulation
 
-Self-test design is posed as a multi-objective selection problem under a hardware budget. The working title could be *Risk- and cost-aware joint test design for in-field self-diagnosis of board-level analog circuits*.
+Self-test design is posed as reaching the coverage that the safety level requires at minimum hardware cost. The working title could be *Certified diagnostic coverage at minimum cost: risk-aware joint test design for in-field self-diagnosis of board-level analog circuits*.
 
 ### Elements
 
-- **Fault universe** F = {f₀ (fault-free), f₁ … f\_K}: catastrophic faults (open and short) and parametric faults (several deviation levels), generated by spicefault. Each fault carries a prior probability p\_k, taken from component failure rates (IEC 61709 or SN 29500), and a severity w\_k, which comes from the risk analysis or from whether the fault violates a specification.
+- **Fault universe** F = {f₀ (fault-free), f₁ … f\_K}: catastrophic faults (open and short) and parametric faults (several deviation levels), generated by spicefault. Each fault carries a prior probability p\_k, taken from component failure rates (IEC 61709 or SN 29500) split into failure modes, a classification as safe or dangerous, and a severity w\_k, which comes from the risk analysis or from whether the fault violates a specification or a safety goal.
 - **Candidate tests** t = (s, n, m): a stimulus s (DC level, sine at a frequency, step), an accessible node n and a measured feature m (mean value, amplitude, phase, settling time, supply current).
 - **Cost** with a shared part: accessing a node costs once (switch, pin, ADC channel) and each measurement adds time. ADC noise and resolution are included in the measurement model.
 - **Tolerances** by large Monte Carlo, with distributions of the components and of the ADC.
@@ -138,6 +153,16 @@ False alarm rate on fault-free circuits within tolerance, analogous to yield los
 FA(Q) = P(\text{alarm} \mid f_0, Q)
 ```
 
+Alignment with the standards. With w\_k = 1 and the sum restricted to dangerous faults, DC\_w is the diagnostic coverage of IEC 61508 for the element, DC = λ\_DD / λ\_D, where the dangerous detected rate of each fault is its dangerous rate times its detection probability. The other metrics follow from the same rates:
+
+```latex
+SFF = \frac{\lambda_S + \lambda_{DD}}{\lambda_S + \lambda_D}, \qquad
+SPFM = 1 - \frac{\sum (\lambda_{SPF} + \lambda_{RF})}{\sum \lambda}, \qquad
+LFM = 1 - \frac{\sum \lambda_{MPF,L}}{\sum (\lambda - \lambda_{SPF} - \lambda_{RF})}
+```
+
+The difference with current practice is that each detection probability is computed by simulation for the specific circuit and measurement hardware, with its interval, instead of being credited from a table.
+
 Localisation capability as residual uncertainty about the fault, or as the expected size of the candidate set:
 
 ```latex
@@ -147,10 +172,12 @@ H(F \mid Y_Q) = -\sum_{k} \int p(f_k, y) \log p(f_k \mid y) \, dy
 ### Problem
 
 ```latex
-\max_{Q} \; \big( DC_w(Q), \; -H(F \mid Y_Q) \big) \quad \text{s.t.} \quad C(Q) \le B, \;\; FA(Q) \le \alpha
+\min_{Q} \; C(Q) \quad \text{s.t.} \quad \underline{DC}_w(Q) \ge DC^{*}, \;\; FA(Q) \le \alpha
 ```
 
-The result is not a single solution but a Pareto front: for each budget B, which coverage and which resolution are reached.
+where DC\* is the target set by the safety level (for example SPFM ≥ 97 % for ASIL C) and the underlined term is the lower bound of the confidence interval of the coverage, not its point estimate: the claim must hold with a stated confidence. Localisation, H(F | Y\_Q), is a secondary objective among the solutions of equal cost.
+
+The general result is a Pareto front of cost against certified coverage: for each budget, which coverage can be claimed, and for each safety level, how much diagnostic hardware it costs.
 
 ### Algorithms
 
@@ -164,20 +191,20 @@ From the numerical sensitivity matrix of all candidate tests (SPICE sensitivity 
 
 ### Statistical certification
 
-Each detection probability is reported with a Clopper–Pearson interval. The number of Monte Carlo runs per fault is set adaptively until the interval falls below a target width, instead of using a fixed number.
+Each detection probability is reported with a Clopper–Pearson interval. The number of Monte Carlo runs per fault is set adaptively until the interval falls below a target width, instead of using a fixed number. The lower bound of the aggregated coverage is obtained conservatively from the per-fault lower bounds, or by bootstrap when that is too pessimistic.
 
 ## Experimental methodology
 
-Evaluation is on six circuits: three benchmark ones to compare with the literature and three application ones, each with a different kind of risk. The method is domain-neutral; the application circuits show that risk weighting is general.
+Evaluation is on six circuits: three benchmark ones to compare with the literature, a lead demonstrator with a direct safety use and two secondary cases with other kinds of risk. The method is domain-neutral; the secondary cases show that risk weighting is general.
 
 | Circuit | Role | Why |
 | --- | --- | --- |
 | Sallen-Key band-pass | Benchmark | It is the most used; it allows published figures to be reproduced |
 | Four-op-amp biquad | Benchmark | Medium size, many ambiguity groups |
 | Leapfrog low-pass | Benchmark | The largest of the usual ones |
-| Battery measurement chain (cell voltage and current) | Application | Functional safety: an error that hides an overvoltage is far worse than one that only reduces availability |
-| ECG front end | Application | Patient safety (IEC 60601, ISO 14971); already modelled in the author's repository |
-| Bridge sensor conditioning in an unattended node | Application | Data integrity: an undetected drift corrupts the record without anyone noticing |
+| Battery management system measurement chain (cell voltage and current) | Lead demonstrator | Functional safety (ISO 26262 in vehicles, IEC 61508 for industrial and stationary batteries): an error that hides an overvoltage is far worse than one that only reduces availability |
+| ECG front end | Secondary case | Patient safety (IEC 60601, ISO 14971); already modelled in the author's repository |
+| Bridge sensor conditioning in an unattended node | Secondary case | Data integrity: an undetected drift corrupts the record without anyone noticing |
 
 The specific application circuits are still to be refined. The Howland current source (bioimpedance) is kept in reserve as a second biomedical case.
 
@@ -191,10 +218,13 @@ The specific application circuits are still to be refined. The Howland current s
 | E4 | Does the solution change when weighting by risk? | Coverage of severe faults with and without weighting |
 | E5 | How many Monte Carlo runs are needed? | Interval width curves; instability of the rankings with small samples |
 | E6 | Do the chosen tests hold in hardware? | Measured versus simulated coverage on a board with fault injection |
+| E7 | What does computing the coverage change with respect to crediting it from tables? | In the lead demonstrator: coverage claimed, diagnostic hardware needed and evidence produced, table-based FMEDA against CERTA |
 
 ### Hardware validation
 
 Simple boards with typical analog blocks (Sallen-Key, biquad and similar) and fault injection by relays or jumpers, measured with the ADC and DAC of a microcontroller (ESP32 or STM32). The boards are kept deliberately simple: the aim is to validate the method, not an application. A small number of faults per board is enough to check that the simulated test ranking is preserved.
+
+E7 is the experiment that speaks to industry: if the computed coverage reaches the safety target with less diagnostic hardware than the table-based FMEDA, or shows that a tabulated claim does not hold, the method has a direct use.
 
 E5 deserves special attention: if it is shown that with 50 runs the rankings of published methods are not stable, that alone calls part of the literature into question and reinforces the need to certify.
 
@@ -207,12 +237,13 @@ A `spicefault.testdesign` subpackage is added that consumes the simulations spic
 | `candidates` | Enumerates tests (node × stimulus × feature) from the netlist and a list of accessible nodes |
 | `costmodel` | Cost per node and per measurement; ADC noise, resolution and range |
 | `faultprior` | Probabilities per component type and severity per fault or per specification violation |
-| `metrics` | DC\_w, FA, H(F\|Y), ambiguity sets, Clopper–Pearson intervals |
+| `metrics` | DC\_w, FA, H(F\|Y), ambiguity sets, the metrics of the standards (DC, SFF, SPFM, LFM), Clopper–Pearson intervals |
 | `bounds` | Sensitivity matrix and ambiguity groups by SVD |
 | `select` | Cost-benefit greedy, exact ILP (PuLP or OR-Tools) and baselines |
 | `bench` | Runs all methods on all circuits and generates tables and Pareto fronts |
+| `fmeda` | Exports the coverage per failure mode, with its interval, to the spreadsheet format used in safety analyses |
 
-A typical use would be to generate the candidates, load the cost model of the microcontroller, call `select.pareto(...)` with a budget and export the self-test plan (which channel, which stimulus, which thresholds) as JSON for the firmware.
+A typical use would be to generate the candidates, load the cost model of the microcontroller, call `select.pareto(...)` with a coverage target, export the self-test plan (which channel, which stimulus, which thresholds) as JSON for the firmware and the coverage per failure mode to the FMEDA.
 
 This layer also serves the web GUI: the user uploads a netlist and gets the test plan and its coverage.
 
@@ -226,12 +257,12 @@ The main paper closes F2 and coincides with the start of the hardware phase.
 
 | Phase | Dates | Work | Experiments | Milestone to move on | If the milestone fails |
 | --- | --- | --- | --- | --- | --- |
-| F0 State of the art | Nov 2026 – Jan 2027 | Systematic search in Scopus, IEEE Xplore and Web of Science with a PRISMA protocol; in-depth reading of Chakrabarti, Huang, Zilch and Tang | — | G0: nobody has combined embedded cost, risk and certification at board level | The benchmark and the certification become the main contribution |
-| F1 Benchmark and certification | Jan – May 2027 | `candidates` and `metrics` modules, intervals and adaptive Monte Carlo, baselines; definition of the three application cases; first public release of `spicefault.testdesign` with a DOI | E1, E5 | G1: the baselines reproduce the published figures, or the discrepancy is documented | The lack of reproducibility becomes the central result of P2 |
-| F2 Formulation and algorithms | Jun – Nov 2027 | `costmodel`, `faultprior`, greedy, exact ILP, theoretical bound by SVD | E2, E3, E4 | G2: the greedy stays close to the optimum and risk weighting changes the selection | P3 focuses on the formulation and the benchmark; the greedy remains one more method |
+| F0 State of the art | Nov 2026 – Jan 2027 | Systematic search in Scopus, IEEE Xplore and Web of Science with a PRISMA protocol; in-depth reading of Chakrabarti, Huang, Zilch and Tang; mapping of the coverage requirements of the safety standards | — | G0: nobody has combined embedded cost, risk and certification at board level | The benchmark and the certification become the main contribution |
+| F1 Benchmark and certification | Jan – May 2027 | `candidates` and `metrics` modules with the metrics of the standards, intervals and adaptive Monte Carlo, baselines; definition of the lead demonstrator and the two secondary cases; first public release of `spicefault.testdesign` with a DOI | E1, E5 | G1: the baselines reproduce the published figures, or the discrepancy is documented | The lack of reproducibility becomes the central result of P2 |
+| F2 Formulation and algorithms | Jun – Nov 2027 | `costmodel`, `faultprior`, minimum cost for a coverage target (greedy and exact ILP), theoretical bound by SVD | E2, E3, E4 | G2: the greedy stays close to the optimum and risk weighting changes the selection | P3 focuses on the formulation and the benchmark; the greedy remains one more method |
 | F3 Board validation | Oct 2027 – Apr 2028 | Simple boards with typical analog blocks (Sallen-Key, biquad and similar) and fault injection; firmware on ESP32 or STM32 that runs the test plan | E6 | G3: the simulated test ranking holds on the board | The simulation-to-reality gap is published and bounded |
-| F4 Applications | May – Dec 2028 | Three cases with different kinds of risk: battery measurement chain, ECG front end and bridge sensor conditioning | E3 and E4 on the application circuits | — | — |
-| F5 Tool and dissemination | In parallel with F4 | Self-test plan exportable from the web GUI, documentation, dataset and teaching material | — | — | — |
+| F4 Safety demonstrator and applications | May – Dec 2028 | Battery management system measurement chain taken to a mock safety assessment against a table-based FMEDA, on hardware; ECG front end and bridge sensor conditioning as secondary cases | E7; E3 and E4 on the application circuits | G4: the computed coverage meets the safety target with less diagnostic hardware than the table-based FMEDA | The result is reported as evidence that complements the FMEDA, and the cases where the tables overestimate become the contribution |
+| F5 Tool and exploitation | In parallel with F4 | Export to FMEDA, web GUI, documentation and training for industry, dataset and teaching material | — | — | — |
 
 F2 and F3 overlap by two months on purpose: board design starts while the F2 experiments are being closed.
 
@@ -245,7 +276,7 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 | P4 | Conference paper with the first board measurements | Jan – Feb 2028 | Feb 2028 | I2MTC or MeMeA | First results of E6 |
 | P5 | Embedded self-test validated on a board | Mar – Jun 2028 | Jun 2028 | IEEE Transactions on Instrumentation and Measurement | Full E6 |
 | P6 | Data descriptor: simulations and measurements with fixed splits | Jun – Jul 2028 | Jul 2028 | Data in Brief | F1, F3 and F5 |
-| P7 | Risk-weighted self-test in three applications with different kinds of risk: functional safety, patient safety and data integrity | Aug – Nov 2028 | Nov 2028 | To be decided once the cases are fixed | F4 |
+| P7 | Computed versus table-based diagnostic coverage: a mock safety assessment of a battery management system, with two secondary cases | Aug – Nov 2028 | Nov 2028 | To be decided once the demonstrator is fixed (energy or safety journal) | F4 |
 
 ### Contributions without a paper
 
@@ -259,6 +290,15 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 - **Timing of P1.** The review makes the gap public before P3. It should be limited to mapping the field and pointing out directions, without anticipating the formulation.
 - **Conference deadlines.** The dates of P2 and P4 are indicative; they have to be adjusted to the calls of ETS, LATS, I2MTC and MeMeA.
 
+## Impact and exploitation
+
+- **Who uses it.** Designers and safety engineers of products that must be certified: automotive and industrial electronics, battery management systems, medical equipment. The output enters a document they already produce, the FMEDA.
+- **Technology readiness.** From level 2–3 (formulation and simulation) to level 4 (validation on laboratory boards, WP3), and level 5 with the lead demonstrator on a partner's board (WP4).
+- **Measurable outcomes.** Coverage reported with a confidence interval of a stated width; diagnostic hardware needed to reach a given safety level, against the table-based FMEDA (E7); measured against predicted coverage on at least two boards (E6 and T4.4).
+- **Partners sought.** A research group in energy electronics and battery management, a manufacturer of battery management systems or industrial electronics for the lead demonstrator, a functional safety expert and, if possible, a letter of support from a certification body.
+- **Funding.** The project fits national and regional competitive calls for research projects and, with an industrial partner, public-private collaboration calls. In European programmes it fits better as a work package of a larger consortium in electronics or batteries.
+- **Secondary impact.** Self-diagnosis that locates the faulty component supports repair instead of replacement and the qualification of second-life batteries.
+
 ## Risks and mitigations
 
 | Risk | Mitigation |
@@ -269,6 +309,9 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 | The (1 − 1/e) guarantee does not hold with shared tolerances | Present it as a motivated heuristic and measure the gap to the ILP |
 | The computational cost of the large Monte Carlo | The parallelisation spicefault already has and adaptive sampling |
 | Hardware validation drags on | Limit it to simple boards with benchmark circuits and few faults; the main paper does not depend on it |
+| A certification body does not accept coverage computed by simulation | Present it as evidence that complements the FMEDA, not as a replacement; back it with hardware fault injection (E6, T4.4) and with the confidence bounds |
+| No industrial partner for the lead demonstrator | Build it on an open reference design of a battery management system, on a board made as in WP3 |
+| The split of failure rates into modes is uncertain | Use published failure mode distributions and analyse the sensitivity of the coverage to them |
 
 **Still to be checked:** this review is based on web search. Before writing, a systematic search in Scopus or IEEE Xplore is advisable, especially from 2023 to 2026 and for the groups of Stratigopoulos and Florence, in case one of them has already combined compaction with localisation at board level.
 

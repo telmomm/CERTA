@@ -7,9 +7,9 @@ toc: false
 ::: {.hero style="background-image: url(assets/backgrounds/certa-background-dark.png);"}
 ![](assets/logo/certa-logo-dark.png){fig-alt="CERTA: Certified, Embedded, Risk-aware Test design for Analog circuits" fig-align="left"}
 
-[What an embedded system should measure to diagnose its own analog electronics.]{.tagline}
+[Diagnostic coverage of analog electronics, computed and certified instead of taken from tables.]{.tagline}
 
-[A research project on self-test design at board level: with the real cost of the hardware, weighted by the risk of each fault and with statistically certified coverage.]{.lead-text}
+[A research project on self-test design at board level: what an embedded system should measure to reach the coverage that functional safety requires, at minimum hardware cost and with a confidence interval that can be used as evidence.]{.lead-text}
 
 [The project](project.qmd){.btn .btn-primary role="button"}
 [Repository on GitHub](https://github.com/telmomm/CERTA){.btn .btn-outline-light role="button"}
@@ -17,7 +17,9 @@ toc: false
 
 ## The problem
 
-Analog test point selection has been studied for forty years and is now saturated with metaheuristics applied to the same benchmark filters. The gap is not in the optimiser but in the formulation: nobody brings together the pieces that an in-field self-test needs.
+Functional safety standards (IEC 61508, ISO 26262) require every safety-related product to declare the diagnostic coverage of its hardware. For analog parts that figure is taken today from generic tables, with conservative margins and no uncertainty.
+
+On the research side, analog test point selection has been studied for forty years and is now saturated with metaheuristics applied to the same benchmark filters. The gap is not in the optimiser but in the formulation: nobody brings together the pieces that an in-field self-test needs.
 
 ## What CERTA proposes
 
@@ -58,12 +60,12 @@ Each fault weighs according to its probability and its severity, with false alar
 
 ### Certified coverage
 
-Confidence intervals, a theoretical bound as reference and an open benchmark.
+Diagnostic coverage with confidence intervals, aligned with IEC 61508 and ISO 26262 and exported to the FMEDA.
 :::
 :::
 :::
 
-The expected outcome is an open tool that, starting from the netlist of a circuit, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and demonstrated on three application cases.
+The expected outcome is an open tool that, starting from the netlist of a circuit, returns the self-test plan (which channel, which stimulus, which thresholds) and its certified coverage, validated on boards and demonstrated on the measurement chain of a battery management system.
 
 ![](assets/backgrounds/certa-divider.png){.divider alt=""}
 

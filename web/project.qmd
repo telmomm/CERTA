@@ -5,6 +5,8 @@ description: "What problem CERTA addresses and what it proposes."
 
 ## Motivation
 
+Every manufacturer that certifies safety-related electronics has to declare the diagnostic coverage of its hardware: the fraction of dangerous faults its diagnostics detect. IEC 61508 and ISO 26262 set the targets (for example, 97 % single-point fault coverage for ASIL C). For analog parts the figure is credited today from generic tables of diagnostic techniques, not computed for the actual circuit, so designs add diagnostic hardware to reach a number nobody has measured.
+
 An electronic device that diagnoses itself in the field has only what it carries on board: a few ADC channels, a DAC and the computing time of its microcontroller. Deciding what to measure with those resources is a test design problem.
 
 The literature has treated it mostly as node selection to isolate every fault class, evaluated in simulation on a handful of benchmark filters. That leaves unanswered the questions that matter in a real device: how much each measurement costs, which faults are the severe ones and with what confidence the coverage is known.
@@ -16,28 +18,29 @@ The literature has treated it mostly as node selection to isolate every fault cl
 | Nodes, stimuli and measurements are optimised separately | Joint design of node, stimulus and measured feature |
 | Cost is a count of nodes | A cost model of the embedded hardware: channels, switches, ADC noise and resolution |
 | All fault classes weigh the same | Coverage weighted by fault probability and severity, with a bounded false alarm rate |
-| Percentages without uncertainty, from few Monte Carlo runs | Coverage with confidence intervals and adaptive Monte Carlo |
+| Coverage without uncertainty: few Monte Carlo runs in research, generic tables in safety analyses | Diagnostic coverage computed with confidence intervals, aligned with IEC 61508 and ISO 26262 |
 | No theoretical bound and no reproducible comparison | Gap to the ambiguity groups and an open benchmark of reimplemented methods |
 
 ## What you get
 
 From the netlist of a circuit and the description of the measurement hardware available, the tool returns:
 
-- the **self-test plan**: which channel is measured, with which stimulus and with which thresholds;
+- the **self-test plan** that reaches the coverage required by the safety level at minimum hardware cost: which channel is measured, with which stimulus and with which thresholds;
 - its **coverage**, with a confidence interval and weighted by the risk of each fault;
-- the **distance to the theoretical bound** of what that circuit allows to be diagnosed.
+- the **distance to the theoretical bound** of what that circuit allows to be diagnosed;
+- an **export to the FMEDA**, the safety analysis document the manufacturer already produces.
 
 The plan is exported in a format that the device firmware can run directly.
 
 ## Where it is validated
 
-The method is domain-neutral. It is validated on benchmark circuits and demonstrated on three application cases, each with a different kind of risk.
+The method is domain-neutral. It is validated on benchmark circuits and demonstrated on a battery management system taken through a mock safety assessment, with two secondary cases that carry other kinds of risk.
 
 | Circuit | Role |
 | --- | --- |
 | Sallen-Key band-pass, biquad and leapfrog low-pass | Benchmark: they allow comparison with published figures and are the ones built on boards |
-| Battery measurement chain (cell voltage and current) | Application: functional safety |
-| ECG front end | Application: patient safety |
-| Bridge sensor conditioning in an unattended node | Application: data integrity |
+| Battery management system measurement chain (cell voltage and current) | Lead demonstrator: functional safety, compared with a table-based FMEDA |
+| ECG front end | Secondary case: patient safety |
+| Bridge sensor conditioning in an unattended node | Secondary case: data integrity |
 
 Hardware validation uses simple boards with typical analog blocks and fault injection, measured with the ADC and DAC of a microcontroller.

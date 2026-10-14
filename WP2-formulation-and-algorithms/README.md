@@ -4,7 +4,7 @@ Notes on the contents of this folder. The tasks and their estimated duration are
 
 ## Objective
 
-To formulate self-test design as a multi-objective selection problem under a hardware budget and to solve it: embedded cost model, fault priors and severities taken from the application cases defined in WP1, greedy selection, exact integer linear programme and theoretical bound from the ambiguity groups. It ends at milestone G2: the greedy stays close to the optimum and risk weighting changes the selection.
+To formulate self-test design as reaching a coverage target, set by the safety level and checked against the lower bound of its confidence interval, at minimum hardware cost, and to solve it: embedded cost model, fault priors and severities taken from the application cases defined in WP1, greedy selection, exact integer linear programme and theoretical bound from the ambiguity groups. It ends at milestone G2: the greedy stays close to the optimum and risk weighting changes the selection.
 
 ## Status
 

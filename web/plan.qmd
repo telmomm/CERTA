@@ -3,18 +3,18 @@ title: "Work plan"
 description: "Work packages, milestones and experiments."
 ---
 
-The project is organised in six work packages. The first four end at a milestone that decides how the next one continues.
+The project is organised in six work packages. The first five end at a milestone that decides how the work continues.
 
 ## Work packages
 
 | Package | What it does | Milestone | Status |
 | --- | --- | --- | --- |
-| **WP0** State of the art | Systematic review in Scopus, IEEE Xplore and Web of Science | G0: the gap exists | [In progress]{.tag .in-progress} |
-| **WP1** Benchmark and certification | Reimplemented reference methods, intervals and adaptive Monte Carlo; definition of the application cases | G1: the reimplemented methods reproduce the published figures | [Pending]{.tag} |
-| **WP2** Formulation and algorithms | Cost model, risk weighting, selection algorithms and theoretical bound | G2: the greedy algorithm stays close to the optimum and risk changes the selection | [Pending]{.tag} |
+| **WP0** State of the art | Systematic review in Scopus, IEEE Xplore and Web of Science; what the safety standards require of analog diagnostic coverage | G0: the gap exists | [In progress]{.tag .in-progress} |
+| **WP1** Benchmark and certification | Coverage metrics of the standards with intervals, adaptive Monte Carlo and reimplemented reference methods; definition of the demonstrator | G1: the reimplemented methods reproduce the published figures | [Pending]{.tag} |
+| **WP2** Formulation and algorithms | Minimum hardware cost to reach a coverage target: cost model, risk weighting, selection algorithms and theoretical bound | G2: the greedy algorithm stays close to the optimum and risk changes the selection | [Pending]{.tag} |
 | **WP3** Board validation | Simple boards with typical analog blocks, fault injection and self-test firmware | G3: the simulated ranking holds on the board | [Pending]{.tag} |
-| **WP4** Applications | Three cases with different kinds of risk: battery measurement chain, ECG front end and bridge sensor conditioning | — | [Pending]{.tag} |
-| **WP5** Tool and dissemination | Web GUI, documentation, dataset and teaching material | — | [Pending]{.tag} |
+| **WP4** Safety demonstrator and applications | Battery management system taken to a mock safety assessment against a table-based FMEDA; ECG front end and bridge sensor conditioning as secondary cases | G4: the computed coverage meets the safety target with less diagnostic hardware | [Pending]{.tag} |
+| **WP5** Tool and exploitation | Export to FMEDA, web GUI, documentation and training for industry, dataset and teaching material | — | [Pending]{.tag} |
 
 : {tbl-colwidths="[24,34,28,14]"}
 
@@ -30,5 +30,6 @@ The tasks of each package and their estimated duration are in the [ROADMAP](http
 | E4 | Does the solution change when weighting by risk? |
 | E5 | How many Monte Carlo runs are needed for the rankings to be stable? |
 | E6 | Do the tests chosen in simulation hold in hardware? |
+| E7 | What does computing the diagnostic coverage change with respect to crediting it from tables? |
 
 : {tbl-colwidths="[10,90]"}
