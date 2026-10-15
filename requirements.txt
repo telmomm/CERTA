@@ -2,3 +2,5 @@ pandas>=2.2
 xlrd>=2.0
 ipykernel
 nbconvert
+spicefault==0.4.1
+matplotlib

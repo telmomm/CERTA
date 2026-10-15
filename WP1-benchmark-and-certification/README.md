@@ -8,7 +8,15 @@ To build the open benchmark on which every method is compared: benchmark circuit
 
 ## Status
 
-Not started. Requires milestone G0 (WP0).
+T1.1 started ahead of milestone G0 (WP0): the benchmark circuits are already fixed in GUIDE.md and do not depend on the outcome of the review.
+
+## Folders
+
+| Folder | What goes inside |
+| --- | --- |
+| `T1.1-benchmark-circuits` | `circuits.md` (source, values, tolerances and faults of each circuit), `netlists/`, the notebook `01_benchmark_circuits.ipynb` and its outputs: `fault_universe.csv` and `starting_simulations.csv` |
 
 ## Notes
+
+- Simulations use spicefault (pinned in `requirements.txt`) and ngspice, which is installed separately (`brew install ngspice` on macOS).
 
