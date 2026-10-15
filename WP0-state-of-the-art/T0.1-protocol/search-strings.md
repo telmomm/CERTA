@@ -9,7 +9,7 @@ reference: "WP0 · T0.1"
 
 # Summary {-}
 
-Block S1 (test design) has been run: 3214 records before deduplication. Block S2 (safety coverage) is to be run in T0.2. The counts and the check of the control set ([control_set.csv](control_set.csv)) are in the notebook of `T0.2-search-and-deduplication`: K01–K24 check S1 and K25–K27 check S2.
+Block S1 (test design) gave 3214 records and block S2 (safety coverage) 237, before deduplication. The counts and the check of the control set ([control_set.csv](control_set.csv)) are in the notebook of `T0.2-search-and-deduplication`: K01–K24 check S1 and K25–K27 check S2.
 
 # S1 · Test design
 
@@ -82,7 +82,7 @@ AND ("All Metadata":fault OR "All Metadata":defect OR "All Metadata":diagnosis)
 
 Every record must mention an analog circuit or measurement chain. The metrics of the standards and FMEDA require nothing else; the general safety terms also require a coverage, fault injection or self-test term. If S2 gives more than 1500 new records after deduplication against S1, `diagnos*` is removed from the last group and the search is repeated.
 
-## Scopus
+## Scopus (94 records)
 
 ```text
 TITLE-ABS-KEY ( ( analog* OR "mixed signal" OR "signal chain" OR "measurement chain" OR "sensor interface" OR "battery management" ) AND (
@@ -96,7 +96,9 @@ TITLE-ABS-KEY ( ( analog* OR "mixed signal" OR "signal chain" OR "measurement ch
 AND ( DOCTYPE ( ar ) OR DOCTYPE ( cp ) OR DOCTYPE ( re ) OR DOCTYPE ( ch ) )
 ```
 
-## Web of Science Core Collection
+## Web of Science Core Collection (48 and 52 records)
+
+Advanced Search, all editions. Two queries, both exported to `WOS/`. `S2_original` is the protocol string (48 records):
 
 ```text
 TS=( ( analog* OR "mixed signal" OR "signal chain" OR "measurement chain" OR "sensor interface" OR "battery management" ) AND (
@@ -109,7 +111,20 @@ TS=( ( analog* OR "mixed signal" OR "signal chain" OR "measurement chain" OR "se
 ) )
 ```
 
-## IEEE Xplore
+`S2` is the variant that WoS suggested, with `fmeca` and `p242r` in place of `fmeda` and `P2427` (52 records). It adds 8 records, all FMECA reliability studies outside the field; they are kept because they were retrieved, and are excluded at screening:
+
+```text
+TS=( ( analog* OR "mixed signal" OR "signal chain" OR "measurement chain" OR "sensor interface" OR "battery management" ) AND (
+  "diagnostic coverage" OR "safe failure fraction" OR "single point fault metric" OR "latent fault metric"
+  OR fmeca OR "failure modes effects and diagnostic*"
+  OR (
+    ( "functional safety" OR "ISO 26262" OR "IEC 61508" OR "IEC 60601" OR "IEEE 2427" OR "p242r" OR "safety mechanism*" OR asil OR "safety integrity level" )
+    AND ( "fault coverage" OR "defect coverage" OR "fault injection" OR "fault simulation" OR "defect simulation" OR "self test*" OR bist OR "built in test" OR diagnos* )
+  )
+) )
+```
+
+## IEEE Xplore (12 and 31 records)
 
 X3, metrics of the standards:
 
