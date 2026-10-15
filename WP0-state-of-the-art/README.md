@@ -8,7 +8,7 @@ To establish, with a reproducible systematic review, whether the gap that motiva
 
 ## Scope
 
-- **In:** literature on the selection of test points, stimuli and measurements, testability and self-test in analog and mixed-signal circuits, with no date limit; search in Scopus, Web of Science and IEEE Xplore, citation tracking and author searches; screening, data extraction, in-depth reading of the four key works, G0 report and skeleton of P1; mapping of the requirements of IEC 61508, ISO 26262, IEC 60601-1 with ISO 14971 and IEEE 2427 on analog diagnostic coverage.
+- **In:** literature on the selection of test points, stimuli and measurements, testability and self-test in analog and mixed-signal circuits, and on how the diagnostic coverage of analog hardware is computed for functional safety, with no date limit; search in Scopus, Web of Science and IEEE Xplore, citation tracking and author searches; screening, data extraction, in-depth reading of the four key works, G0 report and skeleton of P1; mapping of the requirements of IEC 61508, ISO 26262, IEC 60601-1 with ISO 14971 and IEEE 2427 on analog diagnostic coverage.
 - **Out:** reimplementing methods (WP1), developing the formulation (WP2), diagnosis works that only classify on fixed measurements, digital test and the full writing of P1.
 - **Estimated duration:** about 3 months.
 
