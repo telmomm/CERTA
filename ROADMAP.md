@@ -91,7 +91,7 @@ The specific circuits are refined in T1.2.
 
 ## WP5 · TOOL AND EXPLOITATION
 
-About 4 months, in parallel with WP4. Requires G2; the dataset requires the WP3 measurements.
+About 4 months, in parallel with WP4. Requires G2; the dataset requires the WP3 measurements. T5.7 is the exception: it starts with WP0 and runs across the whole project.
 
 | Id | Task | Deliverable | Estimated duration |
 | --- | --- | --- | --- |
@@ -101,3 +101,4 @@ About 4 months, in parallel with WP4. Requires G2; the dataset requires the WP3 
 | T5.4 | Dataset of simulations and measurements with fixed splits, and skeleton of P6 | Deposit with a DOI | 3 weeks |
 | T5.5 | Fault diagnosis exercises for teaching, generated from the GUI | Collection of exercises | 3 weeks |
 | T5.6 | Final release of `spicefault.testdesign` with a DOI | Release on Zenodo | 2 weeks |
+| T5.7 | Dissemination and intellectual property plan: papers, conferences, deposits and protection options, each with the tasks it requires; reviewed at each milestone | `plan.md` | 1 week, then a review at each milestone |

@@ -1,18 +1,46 @@
 R1843	https://doi.org/10.1109/tvlsi.2026.3665483
 R1853	https://doi.org/10.1109/ets69887.2026.11591724
+R1856	https://doi.org/10.23919/date69613.2026.11539586
+R1880	https://doi.org/10.1109/ets69887.2026.11591618
+R2709	https://doi.org/10.1109/access.2025.3585636
+R2716	https://doi.org/10.1109/isse65583.2025.11120993
 R1835	https://doi.org/10.1109/itc58126.2025.00006
+R2698	https://doi.org/10.1109/ets61313.2024.10567699
+R2700	https://doi.org/10.1109/fdl63219.2024.10673865
+R1781	https://doi.org/10.1109/itc51657.2024.00055
+R2702	https://doi.org/10.3390/electronics13142871
+R2706	https://doi.org/10.1109/vdat63601.2024.10705745
+R2693	https://doi.org/10.1109/isscc42615.2023.10067607
+R2694	https://doi.org/10.1117/12.2670634
+R2688	https://doi.org/10.1109/vlsitechnologyandcir46769.2022.9830347
+R2689	https://doi.org/10.1109/sbcci55532.2022.9893243
+R2224	https://doi.org/10.1109/itc44778.2020.9325230
 R1628	https://doi.org/10.1145/3308566
+R2678	https://doi.org/10.1109/itc44170.2019.9000141
+R2680	https://doi.org/10.1007/978-3-030-02215-0_5
+R2681	https://doi.org/10.1109/iintec48298.2019.9112131
 R2155	https://doi.org/10.1109/icece48499.2019.9058507
+R1608	https://doi.org/10.1109/ets.2018.8400688
 R2138	https://doi.org/10.1109/vts.2018.8368662
 R1540	https://doi.org/10.1109/vts.2017.7928919
+R2663	https://doi.org/10.4271/2017-01-0015
+R2665	https://doi.org/10.1109/fdl.2017.8303890
+R2666	https://doi.org/10.4271/2017-01-1202
 R1575	https://doi.org/10.1109/phm.2017.8079296
-R1534	https://doi.org/10.1109/tcad.2016.2547904
-R1538	https://doi.org/10.1109/vts.2016.7477263
+R2670	https://doi.org/10.4271/2017-01-0066
+R2656	https://doi.org/10.1109/test.2016.7805869
+R2657	https://doi.org/10.1109/smacd.2016.7520721
 R2100	https://doi.org/10.1109/test.2016.7805835
-R1451	no DOI: An idea of an approach to self-testing of mixed signal systems based on a quadratic function stimulation
+R1534	https://doi.org/10.1109/tcad.2016.2547904
+R2660	https://doi.org/10.1007/978-3-319-24457-0_2
+R1538	https://doi.org/10.1109/vts.2016.7477263
 R1456	https://doi.org/10.1007/978-3-319-09507-3_138
-R1464	https://doi.org/10.1007/s10836-015-5545-1
+R1451	no DOI: An idea of an approach to self-testing of mixed signal systems based on a quadratic function stimulation
 R2073	https://doi.org/10.7873/date.2015.0233
+R1464	https://doi.org/10.1007/s10836-015-5545-1
+R2651	https://doi.org/10.4271/2015-01-0267
+R2653	https://doi.org/10.4271/2015-01-0234
+R2654	https://doi.org/10.1109/fdl.2014.7119346
 R1406	https://doi.org/10.4028/www.scientific.net/amm.568-570.3
 R1440	no DOI: Testing method of analog parts for mixed signal microsystems based on microcontrollers
 R1384	https://doi.org/10.1109/tvlsi.2012.2205027
@@ -27,17 +55,18 @@ R1240	https://doi.org/10.1109/test.2011.6139127
 R1244	https://doi.org/10.1016/j.microrel.2011.02.022
 R1280	https://doi.org/10.1109/date.2011.5763065
 R1285	no DOI: Ultra low-cost configurability test strategy for an embedded analog circuit
+R2642	https://doi.org/10.1109/icca.2010.5524110
 R1157	https://doi.org/10.1109/test.2010.5699271
 R1202	https://doi.org/10.1109/vts.2010.5469546
 R1996	https://doi.org/10.1109/tvlsi.2009.2017196
 R1098	https://doi.org/10.1016/j.measurement.2009.01.014
 R1106	no DOI: A simple fault diagnosis method for analog parts of electronic embedded systems
+R1973	https://doi.org/10.1145/1629911.1630098
 R1107	https://doi.org/10.1109/test.2009.5355836
 R1111	https://doi.org/10.1109/iccd.2009.5413139
 R1120	no DOI: Fault diagnosis of fully differential circuits in electronic embedded systems
-R1138	https://doi.org/10.1007/s10836-009-5113-7
-R1973	https://doi.org/10.1145/1629911.1630098
 R1983	https://doi.org/10.1109/vts.2009.59
+R1138	https://doi.org/10.1007/s10836-009-5113-7
 R1049	https://doi.org/10.1109/ets.2008.31
 R1086	https://doi.org/10.1109/iccd.2008.4751867
 R1088	https://doi.org/10.1109/autest.2008.4662605
@@ -46,15 +75,17 @@ R0956	https://doi.org/10.1016/j.measurement.2006.07.015
 R0978	https://doi.org/10.1109/imtc.2007.379087
 R0980	https://doi.org/10.1109/date.2007.364682
 R0993	https://doi.org/10.1109/dtis.2007.4449488
+R1957	https://doi.org/10.1109/vts.2007.41
 R1026	no DOI: Using a square-wave signal for fault diagnosis of analog pants of mixed-signal embedded systems controlled by microcontrollers
 R1027	https://doi.org/10.1109/imtc.2007.379196
-R1957	https://doi.org/10.1109/vts.2007.41
 R0905	https://doi.org/10.1109/imtc.2006.235517
 R0906	https://doi.org/10.1109/imtc.2006.328453
 R1950	https://doi.org/10.1109/mdt.2006.154
 R0849	no DOI: About fault diagnosis methods of analog electronic circuits based on the time response to a square impulse and identification curves in multidimensional spaces
 R0886	no DOI: Implementation of an input-output method of diagnosis of analog electronic circuits in embedded systems
 R1933	no DOI: Automatic Diagnostic Program Generation for Mixed Signal Load Board
+R2636	https://doi.org/10.1109/rams.2001.902490
+R2633	https://doi.org/10.1109/rams.2000.816328
 R0605	https://doi.org/10.1109/82.877140
 R0502	https://doi.org/10.1023/a:1008343108840
 R0520	https://doi.org/10.1109/icecs.1999.814491

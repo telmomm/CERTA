@@ -1,7 +1,11 @@
 rater_a,rater_b,records,agreement,kappa,a_to_full_text,b_to_full_text
-main,chatgpt,2632,0.465,0.137,0.282,0.775
-main,deepseek,1355,0.824,0.535,0.283,0.217
-main,grok,2632,0.791,0.441,0.282,0.209
+main,chatgpt,2734,0.465,0.137,0.281,0.775
+main,claude,102,1.0,1.0,0.255,0.255
+main,deepseek,1412,0.821,0.519,0.28,0.21
+main,grok,2734,0.789,0.431,0.281,0.206
+chatgpt,claude,102,0.451,0.128,0.765,0.255
 chatgpt,deepseek,1412,0.417,0.107,0.763,0.21
 chatgpt,grok,2734,0.419,0.121,0.775,0.206
+claude,deepseek,57,0.737,-0.092,0.211,0.053
+claude,grok,102,0.725,0.122,0.255,0.118
 deepseek,grok,1412,0.798,0.392,0.21,0.21

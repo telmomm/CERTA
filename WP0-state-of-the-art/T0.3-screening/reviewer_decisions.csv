@@ -6619,263 +6619,365 @@ R2631,grok,exclude,E1,
 R2632,chatgpt,doubt,,Analog circuit example not confirmed
 R2632,grok,exclude,E1,
 R2633,chatgpt,doubt,,Test selection or safety coverage unclear
+R2633,claude,doubt,,coverage analysis of diagnostics in hardware design; analog not stated
 R2633,deepseek,exclude,E3,
 R2633,grok,exclude,E4,
 R2634,chatgpt,include,,
+R2634,claude,exclude,E3,sensor selection for SIS
 R2634,deepseek,exclude,E3,
 R2634,grok,exclude,E3,
 R2635,chatgpt,doubt,,Scope unclear from abstract
+R2635,claude,exclude,E5,position paper
 R2635,grok,exclude,E3,
 R2636,chatgpt,include,,
+R2636,claude,doubt,,IEC 61508 evaluation of common circuit designs with diagnostics
 R2636,deepseek,exclude,E3,
 R2636,grok,exclude,E3,
 R2637,chatgpt,doubt,,Test selection or safety coverage unclear
+R2637,claude,exclude,E3,field device diagnostics
 R2637,grok,exclude,E3,
 R2638,chatgpt,doubt,,Test selection or safety coverage unclear
+R2638,claude,exclude,E3,telephone audio reliability
 R2638,grok,exclude,E3,
 R2639,chatgpt,include,,
+R2639,claude,exclude,E5,supplier viewpoint
 R2639,deepseek,exclude,E3,
 R2639,grok,exclude,E4,practice
 R2640,chatgpt,doubt,,Test selection or safety coverage unclear
+R2640,claude,exclude,E3,asset management
 R2640,grok,exclude,E4,
 R2641,chatgpt,doubt,,Test selection or safety coverage unclear
+R2641,claude,exclude,E3,HART field devices
 R2641,grok,exclude,E3,
 R2642,chatgpt,exclude,E4,
+R2642,claude,doubt,,board-level safety analog input module with self-diagnosis and fault injection
 R2642,deepseek,exclude,E4,
 R2642,grok,exclude,E4,
 R2643,chatgpt,doubt,,Coverage computation unclear
+R2643,claude,exclude,E5,product article on a battery monitor
 R2643,grok,exclude,E3,
 R2644,chatgpt,exclude,E1,
+R2644,claude,exclude,E1,FPGA fuzzy controller
 R2644,deepseek,exclude,E3,
 R2644,grok,exclude,E1,
 R2645,chatgpt,include,,
+R2645,claude,exclude,E3,reactor protection system reliability
 R2645,deepseek,exclude,E3,
 R2645,grok,include,,
 R2646,chatgpt,exclude,E3,
+R2646,claude,exclude,E3,battery management
 R2646,deepseek,exclude,E3,
 R2646,grok,exclude,E3,
 R2647,chatgpt,include,,
+R2647,claude,exclude,E3,sensor communication interface
 R2647,grok,exclude,E1,
 R2648,chatgpt,exclude,E5,review
+R2648,claude,exclude,E4,practice; ISO 26262 hardware metrics of an EPS
 R2648,grok,exclude,E5,review
 R2649,chatgpt,include,,
+R2649,claude,exclude,E3,"fault injection in automotive embedded systems, not analog"
 R2649,grok,exclude,E3,
 R2650,chatgpt,doubt,,Scope unclear from abstract
+R2650,claude,exclude,E3,"fault injection for medical devices, not analog"
 R2650,deepseek,exclude,E3,
 R2650,grok,exclude,E3,
 R2651,chatgpt,include,,
+R2651,claude,include,,diagnostic coverage evaluation for analog drift faults under ISO 26262
 R2651,grok,include,,
 R2652,chatgpt,include,,
+R2652,claude,exclude,E3,ultrasound imaging
 R2652,deepseek,exclude,E3,
 R2652,grok,exclude,E3,
 R2653,chatgpt,include,,
+R2653,claude,doubt,,FMEDA and safety mechanisms of an ASIL-C Hall sensor
 R2653,deepseek,exclude,E3,
 R2653,grok,exclude,E3,
 R2654,chatgpt,include,,
+R2654,claude,doubt,,analog fault injection for safety goal violations; possible version of R2660
 R2654,grok,exclude,E4,
 R2655,chatgpt,doubt,,Test selection or safety coverage unclear
+R2655,claude,exclude,E3,FMECA of Antarctic systems
 R2655,grok,exclude,E3,
 R2656,chatgpt,doubt,,Coverage computation unclear
+R2656,claude,include,,defect tolerance metric consistent with ISO 26262 by analog defect simulation
 R2656,grok,exclude,E3,
 R2657,chatgpt,include,,
+R2657,claude,doubt,,fault grouping for safety verification of AMS circuits by fault injection
 R2657,deepseek,exclude,E4,
 R2657,grok,exclude,E4,
 R2658,chatgpt,include,,
+R2658,claude,exclude,E3,ITER interlock system
 R2658,deepseek,exclude,E3,
 R2658,grok,exclude,E4,
 R2659,chatgpt,exclude,E3,
+R2659,claude,exclude,E3,battery impedance spectroscopy
 R2659,deepseek,exclude,E3,
 R2659,grok,exclude,E3,
 R2660,chatgpt,include,,
+R2660,claude,doubt,,analog fault injection for safety goal violations in battery cell monitoring; possible version of R2654
 R2660,deepseek,exclude,E3,
 R2660,grok,exclude,E4,
 R2661,chatgpt,include,,
+R2661,claude,exclude,E1,cell-aware ATPG for digital cells
 R2661,deepseek,exclude,E5,
 R2661,grok,include,,
 R2662,chatgpt,include,,
+R2662,claude,exclude,E4,AMS language abstraction to speed up fault simulation
 R2662,deepseek,exclude,E4,
 R2662,grok,exclude,E4,
 R2663,chatgpt,include,,
+R2663,claude,include,,diagnostic coverage of a sensor-signal correlation check per ISO 26262
 R2663,deepseek,exclude,E3,
 R2663,grok,include,,
 R2664,chatgpt,exclude,E2,
+R2664,claude,exclude,E3,marine sensors
 R2664,deepseek,exclude,E3,
 R2664,grok,exclude,E3,
 R2665,chatgpt,include,,
+R2665,claude,doubt,,analog fault analysis flow for ISO 26262; possible version of R2680
 R2665,grok,exclude,E4,
 R2666,chatgpt,include,,
+R2666,claude,doubt,,self-diagnostics of battery monitoring ICs for ASIL C/D
 R2666,grok,exclude,E3,
 R2667,chatgpt,include,,
+R2667,claude,exclude,E5,overview of ISO 26262 Part 11
 R2667,grok,include,,
 R2668,chatgpt,include,,
+R2668,claude,exclude,E1,soft errors in register banks
 R2668,deepseek,exclude,E3,
 R2668,grok,include,,
 R2669,chatgpt,exclude,E3,
+R2669,claude,exclude,E3,battery impedance spectroscopy
 R2669,deepseek,exclude,E3,
 R2669,grok,exclude,E3,
 R2670,chatgpt,include,,
+R2670,claude,doubt,,drift fault injection in an ECU circuit model to verify safety mechanisms
 R2670,deepseek,exclude,E3,
 R2670,grok,exclude,E4,
 R2671,chatgpt,include,,
+R2671,claude,exclude,E4,fault injection for MEMS system simulation
 R2671,deepseek,exclude,E3,
 R2671,grok,exclude,E4,
 R2672,chatgpt,include,,
+R2672,claude,exclude,E3,ITER interlock system
 R2672,grok,exclude,E4,
 R2673,chatgpt,include,,
+R2673,claude,exclude,E5,innovative practices session
 R2673,grok,include,,
 R2674,chatgpt,include,,
+R2674,claude,exclude,E5,innovative practices session
 R2674,deepseek,exclude,E5,
 R2674,grok,exclude,E4,
 R2675,chatgpt,doubt,,Test selection or safety coverage unclear
+R2675,claude,exclude,E4,anomaly communication architecture
 R2675,grok,exclude,E4,
 R2676,chatgpt,doubt,,Scope unclear from abstract
+R2676,claude,exclude,E4,practice; BMS safety concept without coverage computation
 R2676,deepseek,exclude,E3,
 R2676,grok,exclude,E3,
 R2677,chatgpt,doubt,,Coverage computation unclear
+R2677,claude,exclude,E5,position paper on design for safety
 R2677,deepseek,exclude,E5,
 R2677,grok,exclude,E5,review
 R2678,chatgpt,doubt,,Test selection or safety coverage unclear
+R2678,claude,include,,analog defect coverage per IEEE P2427 on ITC'17 benchmarks
 R2678,grok,include,,
 R2679,chatgpt,include,,
+R2679,claude,exclude,E3,networked cyber-physical systems
 R2679,grok,exclude,E4,
 R2680,chatgpt,include,,
+R2680,claude,doubt,,analog fault analysis flow for ISO 26262; possible version of R2665
 R2680,grok,exclude,E4,
 R2681,chatgpt,include,,
+R2681,claude,doubt,,self-diagnostics of an analog comparator for functional safety; coverage not stated
 R2681,grok,exclude,E4,
 R2682,chatgpt,include,,
+R2682,claude,exclude,E4,workloads for safety analysis
 R2682,deepseek,exclude,E3,
 R2682,grok,exclude,E1,
 R2683,chatgpt,exclude,E4,
+R2683,claude,exclude,E3,model-based safety and security analysis
 R2683,deepseek,exclude,E3,
 R2683,grok,exclude,E3,
 R2684,chatgpt,exclude,E3,
+R2684,claude,exclude,E5,presentation on safety MCUs
 R2684,deepseek,exclude,E3,
 R2684,grok,exclude,E3,
 R2685,chatgpt,include,,
+R2685,claude,exclude,E4,"practice; SIL2 safety controller, no coverage computation stated"
 R2685,deepseek,exclude,E3,
 R2685,grok,exclude,E3,
 R2686,chatgpt,doubt,,Test selection or safety coverage unclear
+R2686,claude,exclude,E3,compressor
 R2686,deepseek,exclude,E3,
 R2686,grok,exclude,E3,
 R2687,chatgpt,doubt,,Scope unclear from abstract
+R2687,claude,exclude,E3,"PMHF and cyclic DC calculation, not analog; T0.8"
 R2687,deepseek,exclude,E3,
 R2687,grok,exclude,E3,
 R2688,chatgpt,include,,
+R2688,claude,include,,"ASIL-D safety mechanism with BIST in ADC and DAC, fault coverage reported"
 R2688,grok,exclude,E4,
 R2689,chatgpt,include,,
+R2689,claude,doubt,,defect-oriented test of an LDO with defect coverage for ISO 26262
 R2689,grok,exclude,E1,
 R2690,chatgpt,exclude,E4,
+R2690,claude,exclude,E4,mechanical fault models through electrical analogy
 R2690,deepseek,exclude,E3,
 R2690,grok,exclude,E3,
 R2691,chatgpt,doubt,,Test selection or safety coverage unclear
+R2691,claude,exclude,E3,industrial control and cyber-attacks
 R2691,deepseek,exclude,E3,
 R2691,grok,exclude,E3,
 R2692,chatgpt,exclude,E4,
+R2692,claude,exclude,E4,stuck-on/off defect models for IEEE P2427
 R2692,deepseek,include,,
 R2692,grok,exclude,E4,
 R2693,chatgpt,exclude,E3,
+R2693,claude,doubt,,ASIL-D battery monitoring IC; safety mechanisms not detailed
 R2693,deepseek,exclude,E3,
 R2693,grok,exclude,E3,
 R2694,chatgpt,include,,
+R2694,claude,doubt,,ASIL D analog module with redundancy and fault injection; coverage not stated
 R2694,grok,exclude,E3,
 R2695,chatgpt,include,,
+R2695,claude,exclude,E4,"practice; failure mechanisms of Hall sensors, white paper"
 R2695,grok,include,,
 R2696,chatgpt,doubt,,Scope unclear from abstract
+R2696,claude,exclude,E3,vehicle-level HIL fault injection
 R2696,grok,exclude,E3,
 R2697,chatgpt,include,,
+R2697,claude,exclude,E4,defect templates for analog fault injection
 R2697,deepseek,exclude,E4,
 R2697,grok,exclude,E4,
 R2698,chatgpt,doubt,,Test selection or safety coverage unclear
+R2698,claude,include,,defect coverage per IEEE P2427 on an industrial product
 R2698,deepseek,exclude,E4,
 R2698,grok,include,,
 R2699,chatgpt,include,,
+R2699,claude,exclude,E3,ADC data processing
 R2699,grok,exclude,E2,
 R2700,chatgpt,include,,
+R2700,claude,doubt,,analog fault injection for ISO 26262; unclear whether coverage is computed
 R2700,deepseek,exclude,E3,
 R2700,grok,exclude,E4,
 R2701,chatgpt,include,,
+R2701,claude,exclude,E4,multidomain fault models
 R2701,deepseek,include,,
 R2701,grok,exclude,E3,
 R2702,chatgpt,include,,
+R2702,claude,doubt,,op-amp defect detection with defect coverage for ISO 26262
 R2702,grok,exclude,E2,
 R2703,chatgpt,exclude,E2,
+R2703,claude,exclude,E3,fuzzy FMEA
 R2703,grok,exclude,E3,
 R2704,chatgpt,doubt,,Scope unclear from abstract
+R2704,claude,exclude,E3,battery fault diagnosis
 R2704,deepseek,exclude,E3,
 R2704,grok,exclude,E3,
 R2705,chatgpt,doubt,,Scope unclear from abstract
+R2705,claude,exclude,E3,neural network resiliency
 R2705,grok,exclude,E1,
 R2706,chatgpt,doubt,,Scope unclear from abstract
+R2706,claude,doubt,,board-level fault analysis with stimulus detection
 R2706,grok,exclude,E3,
 R2707,chatgpt,doubt,,Scope unclear from abstract
+R2707,claude,exclude,E3,spintronic neural networks
 R2707,deepseek,exclude,E3,
 R2707,grok,exclude,E1,
 R2708,chatgpt,exclude,E1,
+R2708,claude,exclude,E1,test selection for digital SoC blocks
 R2708,deepseek,include,,
 R2708,grok,exclude,E3,
 R2709,chatgpt,include,,
+R2709,claude,include,,analog fault injection to assess ISO 26262 safety metrics
 R2709,grok,include,,
 R2710,chatgpt,include,,
+R2710,claude,exclude,E4,fault simulation dataset for ML; no coverage computed
 R2710,grok,exclude,E4,
 R2711,chatgpt,include,,
+R2711,claude,exclude,E3,PSRR measurement
 R2711,deepseek,exclude,E3,
 R2711,grok,exclude,E4,
 R2712,chatgpt,exclude,E3,
+R2712,claude,exclude,E3,battery fault diagnosis with AI
 R2712,deepseek,exclude,E3,
 R2712,grok,exclude,E3,
 R2713,chatgpt,exclude,E3,
+R2713,claude,exclude,E3,battery management with AI
 R2713,grok,exclude,E3,
 R2714,chatgpt,doubt,,Scope unclear from abstract
+R2714,claude,exclude,E3,battery fault detection with AI
 R2714,grok,exclude,E3,
 R2715,chatgpt,exclude,E3,
+R2715,claude,exclude,E3,battery modelling
 R2715,grok,exclude,E3,
 R2716,chatgpt,include,,
+R2716,claude,doubt,,fault injection of sensor interface signal chains in ECUs for ISO 26262
 R2716,deepseek,exclude,E3,
 R2716,grok,exclude,E3,
 R2717,chatgpt,exclude,E3,
+R2717,claude,exclude,E3,BMS topologies review
 R2717,grok,exclude,E3,
 R2718,chatgpt,doubt,,Test selection or safety coverage unclear
+R2718,claude,exclude,E3,medicine
 R2718,grok,exclude,E3,
 R2719,chatgpt,exclude,E5,review
+R2719,claude,exclude,E3,battery management communication
 R2719,grok,exclude,E5,review
 R2720,chatgpt,exclude,E3,
+R2720,claude,exclude,E3,battery thermal management
 R2720,grok,exclude,E3,
 R2721,chatgpt,exclude,E5,review
+R2721,claude,exclude,E3,battery state of health
 R2721,deepseek,exclude,E3,
 R2721,grok,exclude,E5,review
 R2722,chatgpt,doubt,,Scope unclear from abstract
+R2722,claude,exclude,E3,eVTOL operations
 R2722,deepseek,exclude,E3,
 R2722,grok,include,,
 R2723,chatgpt,doubt,,Test selection or safety coverage unclear
+R2723,claude,exclude,E3,FMECA of naval systems
 R2723,deepseek,exclude,E3,
 R2723,grok,exclude,E1,
 R2724,chatgpt,exclude,E3,
+R2724,claude,exclude,E3,agricultural chassis
 R2724,grok,exclude,E3,
 R2725,chatgpt,doubt,,Test selection or safety coverage unclear
+R2725,claude,exclude,E3,FMECA of solar dryers
 R2725,grok,exclude,E3,
 R2726,chatgpt,exclude,E5,review
+R2726,claude,exclude,E3,electric vehicle fault diagnosis review
 R2726,deepseek,exclude,E3,
 R2726,grok,exclude,E5,review
 R2727,chatgpt,exclude,E3,
+R2727,claude,exclude,E3,thermal runaway detection
 R2727,deepseek,exclude,E3,
 R2727,grok,exclude,E3,
 R2728,chatgpt,doubt,,Scope unclear from abstract
+R2728,claude,exclude,E3,software architectures
 R2728,deepseek,exclude,E3,
 R2728,grok,exclude,E3,
 R2729,chatgpt,doubt,,Scope unclear from abstract
+R2729,claude,exclude,E3,BMS communication signal integrity
 R2729,deepseek,exclude,E3,
 R2729,grok,exclude,E3,
 R2730,chatgpt,doubt,,Analog circuit example not confirmed
+R2730,claude,exclude,E3,battery diagnosis validation
 R2730,deepseek,exclude,E3,
 R2730,grok,exclude,E3,
 R2731,chatgpt,include,,
+R2731,claude,exclude,E3,nuclear research reactor
 R2731,grok,exclude,E4,
 R2732,chatgpt,include,,
+R2732,claude,exclude,E3,"track-and-hold design, no test"
 R2732,deepseek,exclude,E3,
 R2732,grok,exclude,E4,
 R2733,chatgpt,doubt,,Scope unclear from abstract
+R2733,claude,exclude,E3,BMS communication signal integrity
 R2733,deepseek,exclude,E3,
 R2733,grok,exclude,E3,
 R2734,chatgpt,doubt,,Scope unclear from abstract
+R2734,claude,exclude,E3,firmware attacks
 R2734,deepseek,exclude,E3,
 R2734,grok,exclude,E3,

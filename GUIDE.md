@@ -278,6 +278,8 @@ F2 and F3 overlap by two months on purpose: board design starts while the F2 exp
 | P6 | Data descriptor: simulations and measurements with fixed splits | Jun – Jul 2028 | Jul 2028 | Data in Brief | F1, F3 and F5 |
 | P7 | Computed versus table-based diagnostic coverage: a mock safety assessment of a battery management system, with two secondary cases | Aug – Nov 2028 | Nov 2028 | To be decided once the demonstrator is fixed (energy or safety journal) | F4 |
 
+The tasks each paper requires, the alternative venues, five optional papers (P8–P12) and the intellectual property options are in the [dissemination plan](WP5-tool-and-exploitation/T5.7-dissemination-and-ip/plan.md), which is the reference when this table and the plan differ.
+
 ### Contributions without a paper
 
 - spicefault releases with a DOI on Zenodo at the close of F1, F2 and F3, so that each paper cites the exact code it uses.

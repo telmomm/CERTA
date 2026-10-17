@@ -689,7 +689,7 @@ R1569,687,,2017,Magnetic induction tomography system with multi-excitation frequ
 R1571,688,,2017,Parameter fault diagnosis on analog circuits with tolerance,exclude,E2,
 R1572,689,,2017,Post-Silicon Validation: Automatic Characterization of RF Device Nonidealities via Iterative Learning Experiments on Hardware,exclude,E3,
 R1578,690,,2017,Test technology for sequential circuits,exclude,E1,
-R2661,691,,2017,A full life-cycle view of automotive test,,,
+R2661,691,,2017,A full life-cycle view of automotive test,exclude,E1,cell-aware ATPG for digital cells
 R1491,692,,2016,A D-M Chaotic Model ATPG in Mixed Circuits BIST,exclude,E4,
 R1497,693,,2016,An approach to design-for-testability automation of analogue integrated circuits using OBIST strategy,exclude,E4,
 R1501,694,,2016,A self-testing platform with a foreground digital calibration technique for SAR ADCs,exclude,E4,
@@ -1288,8 +1288,8 @@ R2523,1286,,2025,"A Self-Trained, Low-Complexity Method for Detecting Faults in 
 R2548,1287,,2025,Improved Stacked Autoencoder Combined with Density-Based Clustering for Analog Circuit Fault Diagnosis,exclude,E2,
 R2553,1288,,2025,Intermittent Fault Detection and Temporal Localization Method for Analog Circuits Based on Semantic Segmentation,exclude,E2,
 R2573,1289,,2025,Variability and Analog Parameter Characterization in Enclosed Layout Transistors,exclude,E3,
-R2709,1290,,2025,A Layout-Based Method for Analog Fault Injection in the Context of Functional Safety,,,
-R2710,1291,,2025,Enhancing AMS Circuit Reliability: An Anomaly Dataset for Functional Safety Research in Automotive SoCs,,,
+R2709,1290,,2025,A Layout-Based Method for Analog Fault Injection in the Context of Functional Safety,include,,analog fault injection to assess ISO 26262 safety metrics
+R2710,1291,,2025,Enhancing AMS Circuit Reliability: An Anomaly Dataset for Functional Safety Research in Automotive SoCs,exclude,E4,fault simulation dataset for ML; no coverage computed
 R1769,1292,,2024,A Method for Simulating Mixed-Signal ATE Tests,exclude,E4,
 R1778,1293,,2024,Diagnosis of Analog Circuits: The Problem of Ambiguity of Test Equation Solutions,include,,
 R2432,1294,,2024,Analog circuit diagnosis based on support vector machine with parameter optimization by improved NKCGWO,exclude,E2,
@@ -1304,9 +1304,9 @@ R2461,1302,,2024,Fault diagnosis of analog electronic circuits based on wavelet 
 R2462,1303,,2024,Fault diagnosis of analogue circuits based on artificial intelligence algorithms,exclude,E2,
 R2478,1304,,2024,On the Sensitivity of Analog Artificial Neural Network Models to Process Variation,exclude,E3,
 R2480,1305,,2024,Parametric Fault Detection of Analog Circuits by utilizing the Fundamental RMS of the Supply Current Fluctuation,exclude,E4,
-R2698,1306,,2024,A Concept of Provably Detected Defects for Analog Defect Simulation Campaign Improvement,,,
-R2700,1307,,2024,Cross-domain Analog Fault Injection for Designing Robust Smart Systems,,,
-R2701,1308,,2024,Multidomain Fault Models Covering the Analog Side of a Smart or Cyber-Physical System,,,
+R2698,1306,,2024,A Concept of Provably Detected Defects for Analog Defect Simulation Campaign Improvement,include,,defect coverage per IEEE P2427 on an industrial product
+R2700,1307,,2024,Cross-domain Analog Fault Injection for Designing Robust Smart Systems,doubt,,analog fault injection for ISO 26262; unclear whether coverage is computed
+R2701,1308,,2024,Multidomain Fault Models Covering the Analog Side of a Smart or Cyber-Physical System,exclude,E4,multidomain fault models
 R1757,1309,,2023,Indirect Testing of Specifications in Analog Integrated Circuits Based on Black-Box Modeling,doubt,,
 R1760,1310,,2023,OATT: Outlier Oriented Alternative Testing and Post-Manufacture Tuning of Mixed-Signal/RF Circuits and Systems,doubt,,
 R2356,1311,,2023,A Dual-input Fault Diagnosis Model Based on SE-MSCNN for Analog Circuits,exclude,E2,
@@ -1317,9 +1317,9 @@ R2391,1315,,2023,Improved Fault Detection of Analog Circuits by utilizing the Fu
 R2394,1316,,2023,Integer Algorithm: A Useful Tool for Fault Diagnosis of Analog Circuits,exclude,E2,
 R2397,1317,,2023,Machine Learning Support for Diagnosis of Analog Circuits,exclude,E5,review
 R2406,1318,,2023,Pseudosymmetric Enclosed Layout Transistors for Radiation Hardened Analog Applications,exclude,E3,
-R2694,1319,,2023,Design of analog signal processing module for VCU of pure electric vehicle based on ISO 26262,,,
-R2695,1320,,2023,Failure Mechanisms Analysis for Integrated and Analog Position Sensors in Safety Relevant Automotive Use Cases,,,
-R2697,1321,,2023,Verilog-A Implementation of Generic Defect Templates for Analog Fault Injection,,,
+R2694,1319,,2023,Design of analog signal processing module for VCU of pure electric vehicle based on ISO 26262,doubt,,ASIL D analog module with redundancy and fault injection; coverage not stated
+R2695,1320,,2023,Failure Mechanisms Analysis for Integrated and Analog Position Sensors in Safety Relevant Automotive Use Cases,exclude,E4,"practice; failure mechanisms of Hall sensors, white paper"
+R2697,1321,,2023,Verilog-A Implementation of Generic Defect Templates for Analog Fault Injection,exclude,E4,defect templates for analog fault injection
 R1713,1322,,2022,A Time-Efficient Defect Simulation Framework for Analog and Mixed Signal (AMS) Circuits,exclude,E4,
 R1731,1323,,2022,Run-Time Hardware Trojan Detection in Analog and Mixed-Signal ICs,exclude,E3,
 R1735,1324,,2022,Test Equipment Development and Failure Diagnosis Using Sensor Emulators Built with CMOS Analog Multiplexers,exclude,E3,
@@ -1376,10 +1376,10 @@ R2146,1374,,2019,Assessing AMS-RF test quality by defect simulation,doubt,,test 
 R2148,1375,,2019,Design an identification function to reduce the computational resources on the testing process of an analog electronic circuit,doubt,,
 R2149,1376,,2019,Fault diagnosis of analog filter circuit based on genetic algorithm,exclude,E2,
 R2157,1377,,2019,RideNN: A New Rider Optimization Algorithm-Based Neural Network for Fault Diagnosis in Analog Circuits,exclude,E2,
-R2675,1378,,2019,A Distributed Error and Anomaly Communication Architecture for Analog and Mixed-Signal Systems,,,
-R2678,1379,,2019,Efficient analog defect simulation,,,
-R2680,1380,,2019,Fault analysis in analog circuits through language manipulation and abstraction,,,
-R2681,1381,,2019,Fully Hardware based Robust Self-Diagnostics of Analog Comparator for Safety Critical Applications,,,
+R2675,1378,,2019,A Distributed Error and Anomaly Communication Architecture for Analog and Mixed-Signal Systems,exclude,E4,anomaly communication architecture
+R2678,1379,,2019,Efficient analog defect simulation,include,,analog defect coverage per IEEE P2427 on ITC'17 benchmarks
+R2680,1380,,2019,Fault analysis in analog circuits through language manipulation and abstraction,doubt,,analog fault analysis flow for ISO 26262; possible version of R2665
+R2681,1381,,2019,Fully Hardware based Robust Self-Diagnostics of Analog Comparator for Safety Critical Applications,doubt,,self-diagnostics of an analog comparator for functional safety; coverage not stated
 R1580,1382,,2018,A Classification Approach for an Accurate Analog/RF BIST Evaluation Based on the Process Parameters,exclude,E4,
 R1591,1383,,2018,An Automated Low-Cost Analog and Mixed-Signal DFT Method Using Testing Diodes,exclude,E4,
 R1608,1384,,2018,Measuring mixed-signal test stimulus quality,doubt,,stimulus quality metric
@@ -1408,8 +1408,8 @@ R2118,1406,,2017,Complex Fault Modeling Based Analog-Circuit Fault Diagnosis,exc
 R2119,1407,,2017,Correntropy applied to fault detection in analogue circuits,exclude,E2,
 R2122,1408,,2017,Multiple fault diagnosis in analog circuits using the indirect compensation theorem,exclude,E2,
 R2125,1409,,2017,Use models for extending IEEE 1687 to analog test,exclude,E4,
-R2662,1410,,2017,"A homogeneous framework for AMS languages instrumentation, abstraction and simulation",,,
-R2665,1411,,2017,Fault analysis in analog circuits through language manipulation and abstraction,,,
+R2662,1410,,2017,"A homogeneous framework for AMS languages instrumentation, abstraction and simulation",exclude,E4,AMS language abstraction to speed up fault simulation
+R2665,1411,,2017,Fault analysis in analog circuits through language manipulation and abstraction,doubt,,analog fault analysis flow for ISO 26262; possible version of R2680
 R1503,1412,,2016,A unified AC fault diagnosis method for analog circuits based on iterative simulation before test,exclude,E2,
 R1505,1413,,2016,Automatic parametric fault detection in complex analog systems based on a method of minimum node selection,include,,
 R1511,1414,,2016,Design of digital built-in self-test for analog to digital converter,exclude,E4,
@@ -1431,8 +1431,8 @@ R2094,1429,,2016,Diagnosis of parametric faults in linear analog VLSI circuits,e
 R2096,1430,,2016,Every test makes a difference: Compressing analog tests to decrease production costs,include,,
 R2097,1431,,2016,Fault diagnosis for analog circuits with tolerance base on ciucuit feature information matrix,exclude,E7,
 R2108,1432,,2016,Toward complete analog fault coverage with minimal observation points using a fault propagation graph,include,,
-R2656,1433,,2016,Automated measurement of defect tolerance in mixed-signal ICs,,,
-R2657,1434,,2016,Fault grouping for fault injection based simulation of AMS circuits in the context of functional safety,,,
+R2656,1433,,2016,Automated measurement of defect tolerance in mixed-signal ICs,include,,defect tolerance metric consistent with ISO 26262 by analog defect simulation
+R2657,1434,,2016,Fault grouping for fault injection based simulation of AMS circuits in the context of functional safety,doubt,,fault grouping for safety verification of AMS circuits by fault injection
 R1442,1435,,2015,A common platform for bridging pre- and post-silicon verification in mixed-signal designs,exclude,E3,
 R1457,1436,,2015,A tool for analog/RF BIST evaluation using statistical models of circuit parameters,doubt,,
 R1458,1437,,2015,Automated testing of mixed-signal integrated circuits by topology modification,doubt,,
@@ -1446,7 +1446,7 @@ R2071,1444,,2015,A new simulation program for analog circuits using symbolic ana
 R2072,1445,,2015,Application of random forest to the fault detection in analog circuits,exclude,E2,
 R2076,1446,,2015,New aspects of fault diagnosis of nonlinear analog circuits,exclude,E2,
 R2080,1447,,2015,SapWin 4.0 - An enhanced tool for analysis and design of analog circuits,exclude,E3,
-R2651,1448,,2015,Diagnostic Coverage Evaluation Method for Analog Circuits to Comply with Functional Safety Standards,,,
+R2651,1448,,2015,Diagnostic Coverage Evaluation Method for Analog Circuits to Comply with Functional Safety Standards,include,,diagnostic coverage evaluation for analog drift faults under ISO 26262
 R1405,1449,,2014,A method for minimum node selection in diagnostics of analog systems,include,,
 R1408,1450,,2014,A Novel Prediction Method about Single Components of Analog Circuits Based on Complex Field Modeling,exclude,E2,
 R1409,1451,,2014,A Novel Prediction Method for Analog Circuits Based on Gaussion White Noise Estimation,exclude,E2,
@@ -1525,7 +1525,7 @@ R1992,1523,,2010,Fault diagnosis of analog circuits utilizing reconfigurable com
 R1993,1524,,2010,Frequency domain technique for fault diagnosis in analog Circuits-Software and hardware implementation,exclude,E2,
 R1995,1525,,2010,PCA application to frequency reduction for fault diagnosis in analog and mixed electronic circuit,include,,
 R1998,1526,,2010,Symbolic techniques in neural network based fault diagnosis of analog circuits,doubt,,
-R2642,1527,,2010,A safety related analog input module based on diagnosis and redundancy,,,
+R2642,1527,,2010,A safety related analog input module based on diagnosis and redundancy,doubt,,board-level safety analog input module with self-diagnosis and fault injection
 R1111,1528,,2009,Defect-based test optimization for analog/RF circuits for near-zero DPPM applications,include,,defect-oriented test optimisation for near-zero DPPM
 R1114,1529,,2009,EDA for analog DFT? - designers must get on the bus,exclude,E5,
 R1116,1530,,2009,FAULT DIAGNOSIS IN ANALOG ELECTRONIC CIRCUITS - THE SVM APPROACH,exclude,E2,
@@ -1747,10 +1747,10 @@ R1877,1745,,2026,Structural Testing Methodology for Deep Neural Networks based o
 R2580,1746,,2026,A Low-Power Interface Circuit Based on a Voltage Divider and a Microcontroller for a Resistive Sensor,exclude,E3,
 R2581,1747,,2026,A Method for Identifying Single Faults in Nonlinear Circuits,exclude,E2,
 R2622,1748,,2026,"Radiation Robustness Assessment of StrongARM Comparators in 130nm, 65nm and 45nm Technologies",exclude,E3,
-R2723,1749,,2026,Decision-Making Tools Enabling Sustainable Maintenance Strategies of Naval Systems: A Comparison of Multi-Criteria Approaches,,,
-R2725,1750,,2026,Failure mode and criticality analysis of solar dryers for post-harvest preservation of tropical crops in rural Nigeria: A case study,,,
-R2731,1751,,2026,"Sustaining Nuclear Research Infrastructure in Developing Countries: A Comprehensive Plant Life Extension Strategy for Ghana Research Reactor-1 (GHARR-1), Integrating Technical Assessments, Modernization, and Knowledge Management",,,
-R2732,1752,,2026,The Reliability Optimization Design of Vehicle Chip Based on Advanced Technology; [基于先进工艺的车载芯片可靠性优化设计],,,
+R2723,1749,,2026,Decision-Making Tools Enabling Sustainable Maintenance Strategies of Naval Systems: A Comparison of Multi-Criteria Approaches,exclude,E3,FMECA of naval systems
+R2725,1750,,2026,Failure mode and criticality analysis of solar dryers for post-harvest preservation of tropical crops in rural Nigeria: A case study,exclude,E3,FMECA of solar dryers
+R2731,1751,,2026,"Sustaining Nuclear Research Infrastructure in Developing Countries: A Comprehensive Plant Life Extension Strategy for Ghana Research Reactor-1 (GHARR-1), Integrating Technical Assessments, Modernization, and Knowledge Management",exclude,E3,nuclear research reactor
+R2732,1752,,2026,The Reliability Optimization Design of Vehicle Chip Based on Advanced Technology; [基于先进工艺的车载芯片可靠性优化设计],exclude,E3,"track-and-hold design, no test"
 R1795,1753,,2025,Adaptive Confidence Interval-Based Alternate Test for Reliability Enhancement,doubt,,alternate test with confidence intervals
 R1803,1754,,2025,A Test Strategy for a Current Source Designed for Fast Field-Cycling Nuclear Magnetic Resonance,doubt,,test strategy for a current source
 R1808,1755,,2025,CORDIC-Driven Windowed SDFT for High-Resolution CW Doppler Ultrasound Spectrum Estimation,exclude,E3,
@@ -1767,8 +1767,8 @@ R2515,1765,,2025,Anti-Counterfeiting Secured Design of a Bandgap Reference Circu
 R2532,1766,,2025,Confidence Driven Compact Testing of Compute-in-Memory Based Language Models,exclude,E3,
 R2540,1767,,2025,Efficient Parallel Testing and Implicit Cost-Driven Tuning of RF-MIMO Systems,exclude,E3,
 R2551,1768,,2025,Input-Triggered Hardware Trojan Attack on Spiking Neural Networks,exclude,E3,
-R2711,1769,,2025,Green metrology for power integrity: PSRR characterization via compressed sensing,,,
-R2718,1770,,2025,The impact of Achilles tendon thickness and Kager's fat pad thickness on clinical and functional outcomes following open surgical repair of acute Achilles tendon rupture; [Akut aşil tendon rüptürü açık cerrahi onarımı sonrasında Aşil tendon kalınlığı ve Kager yağ yastığı kalınlığının klinik ve fonksiyonel sonuçlar üzerindeki etkisi],,,
+R2711,1769,,2025,Green metrology for power integrity: PSRR characterization via compressed sensing,exclude,E3,PSRR measurement
+R2718,1770,,2025,The impact of Achilles tendon thickness and Kager's fat pad thickness on clinical and functional outcomes following open surgical repair of acute Achilles tendon rupture; [Akut aşil tendon rüptürü açık cerrahi onarımı sonrasında Aşil tendon kalınlığı ve Kager yağ yastığı kalınlığının klinik ve fonksiyonel sonuçlar üzerindeki etkisi],exclude,E3,medicine
 R1779,1771,,2024,Diagnosis of intermittent faults and corresponding algorithm development beyond 5nm technologies,exclude,E1,
 R1786,1772,,2024,Improving At-Speed Test Coverage without compromising Test Time and reducing Test Cost in multi-partition SCAN Design,exclude,E1,
 R2435,1773,,2024,An End-To-End Neuromorphic Radio Classification System With an Efficient Sigma-Delta-Based Spike Encoding Scheme,exclude,E3,
@@ -1776,9 +1776,9 @@ R2466,1774,,2024,High-Dimensional Feature Fault Diagnosis Method Based on HEFS-L
 R2467,1775,,2024,Identifying Undetectable Defects Using Equivalence Checking,exclude,E4,
 R2484,1776,,2024,Preference-Aware Constrained Multi-Objective Bayesian Optimization,exclude,E3,
 R2486,1777,,2024,Simple Measurement Method for Resistive Sensors Based on ADCs of Microcontrollers,exclude,E3,
-R2699,1778,,2024,"Application Specific Integrated Data Processing in ADCs for High Accuracy, Low Latency Advanced Real Time Control Systems",,,
-R2702,1779,,2024,Operational Amplifiers Defect Detection and Localization Using Digital Injectors and Observer Circuits,,,
-R2703,1780,,2024,Probabilistic Fuzzy System for Evaluation and Classification in Failure Mode and Effect Analysis,,,
+R2699,1778,,2024,"Application Specific Integrated Data Processing in ADCs for High Accuracy, Low Latency Advanced Real Time Control Systems",exclude,E3,ADC data processing
+R2702,1779,,2024,Operational Amplifiers Defect Detection and Localization Using Digital Injectors and Observer Circuits,doubt,,op-amp defect detection with defect coverage for ISO 26262
+R2703,1780,,2024,Probabilistic Fuzzy System for Evaluation and Classification in Failure Mode and Effect Analysis,exclude,E3,fuzzy FMEA
 R1749,1781,,2023,Detection of Catastrophic Faults in 6-Bit R-2R Ladder DAC,include,,
 R1758,1782,,2023,Influence of PVT Variation and Threshold Selection on OBT and OBIST Fault Detection in RFCMOS Amplifiers,exclude,E4,
 R1759,1783,,2023,In-Memory Fault as Address Simulation,exclude,E1,
@@ -1793,10 +1793,10 @@ R1739,1791,,2022,Virtual Testing of Protection Systems using Digital Twin Techno
 R2312,1792,,2022,Circuit-to-Circuit Attacks in SoCs via Trojan-Infected IEEE 1687 Test Infrastructure,exclude,E3,
 R2316,1793,,2022,Designing a 9.3µW Low-Power Time-to-Digital Converter (TDC) for a Time Assisted SAR ADC,exclude,E3,
 R2336,1794,,2022,Measurement method for capacitive sensors for microcontrollers based on a phase shifter,exclude,E3,
-R2688,1795,,2022,An Automotive ASIL-D Safety Mechanism in ADC and DAC for Communication Application,,,
-R2690,1796,,2022,Inferring Mechanical Fault Models from the Electrical Domain,,,
-R2691,1797,,2022,Integrated Approach to Diagnostics of Failures and Cyber-Attacks in Industrial Control Systems,,,
-R2692,1798,,2022,Investigation on Realistic Stuck-on/off Defects to Complement IEEE P2427 Draft Standard,,,
+R2688,1795,,2022,An Automotive ASIL-D Safety Mechanism in ADC and DAC for Communication Application,include,,"ASIL-D safety mechanism with BIST in ADC and DAC, fault coverage reported"
+R2690,1796,,2022,Inferring Mechanical Fault Models from the Electrical Domain,exclude,E4,mechanical fault models through electrical analogy
+R2691,1797,,2022,Integrated Approach to Diagnostics of Failures and Cyber-Attacks in Industrial Control Systems,exclude,E3,industrial control and cyber-attacks
+R2692,1798,,2022,Investigation on Realistic Stuck-on/off Defects to Complement IEEE P2427 Draft Standard,exclude,E4,stuck-on/off defect models for IEEE P2427
 R1678,1799,,2021,76- To 81-GHz CMOS Built-In Self-Test with 72-dB C/N and Less Than 1 ppm Frequency Tolerance for Multi-Channel Radar Applications,exclude,E4,
 R2244,1800,,2021,A measurement method for lossy capacitive relative humidity sensors based on a direct sensor-to-microcontroller interface circuit,exclude,E3,
 R2248,1801,,2021,A Modified Sine Cosine Algorithm with Teacher Supervision Learning for Global Optimization,exclude,E3,
@@ -1812,17 +1812,17 @@ R2206,1810,,2020,Fast EVM Tuning of MIMO Wireless Systems Using Collaborative Pa
 R2213,1811,,2020,Influence of sampling frequency on TID response of SAR ADCs,exclude,E3,
 R2226,1812,,2020,Robust DfT Techniques for Built-in Fault Detection in Operational Amplifiers with High Coverage,exclude,E4,
 R2230,1813,,2020,Soft fault diagnosis of linear circuits with the special attention paid to the circuits containing current conveyors,exclude,E2,
-R2685,1814,,2020,Development of high-performance safety controller for excavator,,,
-R2686,1815,,2020,Magnetoelectric Drive Undulating Compressor Unit on the Basis of Wave Compressor for Arctic Shelf Hydrocarbons Production,,,
+R2685,1814,,2020,Development of high-performance safety controller for excavator,exclude,E4,"practice; SIL2 safety controller, no coverage computation stated"
+R2686,1815,,2020,Magnetoelectric Drive Undulating Compressor Unit on the Basis of Wave Compressor for Arctic Shelf Hydrocarbons Production,exclude,E3,compressor
 R1641,1816,,2019,Distance relaying algorithm for phasor measurement unit assisted zone-3 relays of series compensated wind integrated system,exclude,E3,
 R1653,1817,,2019,Predicting  ${X}$ -Sensitivity of Circuit-Inputs on Test-Coverage: A Machine-Learning Approach,exclude,E1,
 R1656,1818,,2019,Selective sensitization of useless sneak-paths for test optimization in memristor-arrays,exclude,E3,
 R2150,1819,,2019,Genetic minimisation of peak-to-peak level of a complex multi-tone signal,exclude,E3,
 R2153,1820,,2019,Open Defect Detection of through Silicon Vias for Structural Power Integrity Test of 3D-ICs,exclude,E3,
-R2677,1821,,2019,Design-For-Safety For Automotive IC Design: Challenges And Opportunities,,,
-R2679,1822,,2019,Efficient Simulation of Faults in Networked Cyber-Physical Systems,,,
-R2682,1823,,2019,Perturbation based workload augmentation for comprehensive functional safety analysis,,,
-R2683,1824,,2019,Towards a model-based safety and security analysis,,,
+R2677,1821,,2019,Design-For-Safety For Automotive IC Design: Challenges And Opportunities,exclude,E5,position paper on design for safety
+R2679,1822,,2019,Efficient Simulation of Faults in Networked Cyber-Physical Systems,exclude,E3,networked cyber-physical systems
+R2682,1823,,2019,Perturbation based workload augmentation for comprehensive functional safety analysis,exclude,E4,workloads for safety analysis
+R2683,1824,,2019,Towards a model-based safety and security analysis,exclude,E3,model-based safety and security analysis
 R1604,1825,,2018,Fault localization of a switched mode power supply based on extended integer-coded dictionary method,doubt,,fault dictionary for a switched-mode power supply (board)
 R1605,1826,,2018,Fault tolerant system based on IDDQ testing,exclude,E4,
 R1611,1827,,2018,Next Generation Armament Test Solutions for the Flightline,exclude,E3,
@@ -1830,32 +1830,32 @@ R1622,1828,,2018,Test data modeling and implementation with enhanced accuracy fo
 R1627,1829,,2018,uC-based ATE for testing a DUT provided with real-world failure models,exclude,E4,
 R2133,1830,,2018,Burn-in test detection method for electronic products based on VFSA-ELM,exclude,E3,
 R2140,1831,,2018,Production Tests Coverage Analysis in the Simulation Environment,doubt,,
-R2671,1832,,2018,Dynamic fault injection for system level simulation of MEMS - A design method for functional safety,,,
-R2672,1833,,2018,Implementation of ITER Fast Plant Interlock System Using FPGAs with CompactRIO,,,
-R2673,1834,,2018,Innovative practices on functional testing and fault simulation for FuSa,,,
-R2674,1835,,2018,Innovative practices on quality levels of A/MS devices,,,
+R2671,1832,,2018,Dynamic fault injection for system level simulation of MEMS - A design method for functional safety,exclude,E4,fault injection for MEMS system simulation
+R2672,1833,,2018,Implementation of ITER Fast Plant Interlock System Using FPGAs with CompactRIO,exclude,E3,ITER interlock system
+R2673,1834,,2018,Innovative practices on functional testing and fault simulation for FuSa,exclude,E5,innovative practices session
+R2674,1835,,2018,Innovative practices on quality levels of A/MS devices,exclude,E5,innovative practices session
 R1548,1836,,2017,An intra-neural microstimulation system for ultra-high field magnetic resonance imaging and magnetoencephalography,exclude,E3,
 R1564,1837,,2017,Hybrid technique for testing IEC 61850 based IEDs of distance protection,exclude,E3,
-R2663,1838,,2017,Calculation of Failure Detection Probability on Safety Mechanisms of Correlated Sensor Signals According to ISO 26262,,,
-R2666,1839,,2017,Functional Safety for Battery Monitoring Integrated Circuits,,,
-R2667,1840,,2017,Improvements in functional safety of automotive IP through ISO 26262:2018 Part 11,,,
-R2668,1841,,2017,ISO26262-compliant soft-error mitigation in register banks,,,
-R2670,1842,,2017,Virtual FMEA and Its Application to Software Verification of Electric Power Steering System,,,
+R2663,1838,,2017,Calculation of Failure Detection Probability on Safety Mechanisms of Correlated Sensor Signals According to ISO 26262,include,,diagnostic coverage of a sensor-signal correlation check per ISO 26262
+R2666,1839,,2017,Functional Safety for Battery Monitoring Integrated Circuits,doubt,,self-diagnostics of battery monitoring ICs for ASIL C/D
+R2667,1840,,2017,Improvements in functional safety of automotive IP through ISO 26262:2018 Part 11,exclude,E5,overview of ISO 26262 Part 11
+R2668,1841,,2017,ISO26262-compliant soft-error mitigation in register banks,exclude,E1,soft errors in register banks
+R2670,1842,,2017,Virtual FMEA and Its Application to Software Verification of Electric Power Steering System,doubt,,drift fault injection in an ECU circuit model to verify safety mechanisms
 R1535,1843,,2016,Test Time Minimization in Reconfigurable Scan Networks,exclude,E1,
-R2655,1844,,2016,A case study in the application of failure analysis techniques to Antarctic Systems: EDEN ISS,,,
-R2658,1845,,2016,Implementation of ITER fast plant interlock system using FPGAS with cRIO,,,
-R2660,1846,,2016,Towards simulation based evaluation of safety goal violations in automotive systems,,,
+R2655,1844,,2016,A case study in the application of failure analysis techniques to Antarctic Systems: EDEN ISS,exclude,E3,FMECA of Antarctic systems
+R2658,1845,,2016,Implementation of ITER fast plant interlock system using FPGAS with cRIO,exclude,E3,ITER interlock system
+R2660,1846,,2016,Towards simulation based evaluation of safety goal violations in automotive systems,doubt,,analog fault injection for safety goal violations in battery cell monitoring; possible version of R2654
 R2070,1847,,2015,Analysis of the classifier fusion efficiency in the diagnostics of the accelerometer,exclude,E3,
 R2073,1848,,2015,Combining adaptive alternate test and multi-site,include,,
 R2075,1849,,2015,Identification of circuit parameters for the specified or measured performances,exclude,E3,
 R2084,1850,,2015,The on-line evolutionary method for soft fault diagnosis in diode-transistor circuits,exclude,E2,
-R2652,1851,,2015,Smartphone-based portable ultrasound imaging system: Prototype implementation and evaluation,,,
-R2653,1852,,2015,System Design and Verification for a Safety Related Integrated Sensor,,,
-R2654,1853,,2015,Towards simulation based evaluation of safety goal violations in automotive systems,,,
+R2652,1851,,2015,Smartphone-based portable ultrasound imaging system: Prototype implementation and evaluation,exclude,E3,ultrasound imaging
+R2653,1852,,2015,System Design and Verification for a Safety Related Integrated Sensor,doubt,,FMEDA and safety mechanisms of an ASIL-C Hall sensor
+R2654,1853,,2015,Towards simulation based evaluation of safety goal violations in automotive systems,doubt,,analog fault injection for safety goal violations; possible version of R2660
 R1402,1854,,2014,A built-in calibration system with a reduced FFT engine for linearity optimization of low power LNA,exclude,E4,
 R1422,1855,,2014,Input stimulus comparison using an adaptive FPGA-based testing system,doubt,,
 R2058,1856,,2014,Data set preprocessing methods for the artificial intelligence-based diagnostic module,exclude,E2,
-R2649,1857,,2014,From safety analyses to experimental validation of automotive embedded systems,,,
+R2649,1857,,2014,From safety analyses to experimental validation of automotive embedded systems,exclude,E3,"fault injection in automotive embedded systems, not analog"
 R1344,1858,,2013,A DFT loopback scheme for ADC ENOB testing using an all-digital ATE,exclude,E4,
 R1350,1859,,2013,An IDDQ BIST approach to characterize phase-locked loop parameters,exclude,E4,
 R1356,1860,,2013,Behavioral model of folded and interpolated ADCs for test evaluation - Case study: Structural DfT method,exclude,E4,
@@ -1864,13 +1864,13 @@ R1369,1862,,2013,Flip-flop selection for partial enhance scan chain using DTESFF
 R1371,1863,,2013,Health assessment of electronic systems,exclude,E3,
 R1380,1864,,2013,On-chip detection of process shift and process spread for post-silicon diagnosis and model-hardware correlation,exclude,E3,
 R2048,1865,,2013,Numerical method for DC fault analysis simplification and simulation time reduction,exclude,E4,
-R2648,1866,,2013,Advantages of the Alternative Method for Random Hardware Failures Quantitative Evaluation - a Practical Survey for EPS,,,
+R2648,1866,,2013,Advantages of the Alternative Method for Random Hardware Failures Quantitative Evaluation - a Practical Survey for EPS,exclude,E4,practice; ISO 26262 hardware metrics of an EPS
 R1304,1867,,2012,Challenges for Semiconductor Test Engineering: A Review Paper,exclude,E5,review
 R1306,1868,,2012,DC testing of switched capacitor based delta sigma converters,exclude,E4,
 R1314,1869,,2012,Innovation Center RFuna,include,,
 R1326,1870,,2012,Statistical measures of two dimensional point set uniformity,exclude,E3,
 R2025,1871,,2012,Integrated optimization of semiconductor manufacturing: A machine learning approach,exclude,E3,
-R2645,1872,,2012,Effect of logic degradation on reliability of digital reactor protection system,,,
+R2645,1872,,2012,Effect of logic degradation on reliability of digital reactor protection system,exclude,E3,reactor protection system reliability
 R1219,1873,,2011,A BIST scheme for operational amplifier by checking the stable output of transient response,exclude,E4,
 R1225,1874,,2011,ADC/DAC loopback linearity testing by DAC output offsetting and scaling,exclude,E4,
 R1235,1875,,2011,Approximate parametric fault diagnosis,doubt,,
@@ -1888,7 +1888,7 @@ R1199,1886,,2010,On-Chip SOC Test Platform Design Based on IEEE 1500 Standard,ex
 R1205,1887,,2010,Predicting dynamic specifications of ADCs with a low-quality digital input signal,exclude,E4,
 R1208,1888,,2010,Recent trends in electronic circuit diagnostics using testing buses; [Współczesne trendy w diagnostyce układów elektronicznych z wykorzystaniem magistral testuja̧cych],exclude,E5,review
 R1216,1889,,2010,The Test Ability of an Adaptive Pulse Wave for ADC Testing,exclude,E4,
-R2643,1890,,2010,Protecting lithium-ion batteries for electric vehicle applications,,,
+R2643,1890,,2010,Protecting lithium-ion batteries for electric vehicle applications,exclude,E5,product article on a battery monitor
 R1096,1891,,2009,Algorithms for ADC Multi-site Test with Digital Input Stimulus,exclude,E4,
 R1103,1892,,2009,An improved soft-error rate measurement technique,exclude,E3,
 R1125,1893,,2009,Hierarchical parametric test metrics estimation: A ΣΔ converter BIST case study,doubt,,parametric test metrics estimation
@@ -1928,15 +1928,15 @@ R0821,1926,,2004,Motivations towards BIST and DfT for embedded charge-pump phase
 R0827,1927,,2004,On-chip testing of embedded silicon transducers,exclude,E4,
 R0845,1928,,2004,The future of high-speed ATE,exclude,E5,
 R0846,1929,,2004,Trends in manufacturing test methods and their implications,exclude,E5,
-R2639,1930,,2004,Functional safety from a component supplier's viewpoint,,,
-R2640,1931,,2004,SIS and asset management - The role of the multifunction instrument,,,
-R2641,1932,,2004,Using hart to increase field device reliability,,,
+R2639,1930,,2004,Functional safety from a component supplier's viewpoint,exclude,E5,supplier viewpoint
+R2640,1931,,2004,SIS and asset management - The role of the multifunction instrument,exclude,E3,asset management
+R2641,1932,,2004,Using hart to increase field device reliability,exclude,E3,HART field devices
 R0737,1933,,2003,A comprehensive signature analysis scheme for oscillation-test,exclude,E4,
 R0738,1934,,2003,A design methodology for a bulk-micromachined two-dimensional electrostatic torsion micromirror,exclude,E3,
 R0739,1935,,2003,A digital and wide power bandwidth H-field generator for automatic test equipment,exclude,E3,
 R0777,1936,,2003,Robust test set for flash AD converter,include,,
 R1932,1937,,2003,An MHDL CAD tool with fault circuit handling,exclude,E4,
-R2638,1938,,2003,Early reliability and failure analysis of modern telephone audio systems,,,
+R2638,1938,,2003,Early reliability and failure analysis of modern telephone audio systems,exclude,E3,telephone audio reliability
 R0675,1939,,2002,An algorithm for soft-fault diagnosis of linear and nonlinear circuits,exclude,E2,
 R0687,1940,,2002,A successful DFT tester: what will it look like? Is DFT tester a logical next step in ATE evolution?,exclude,E5,
 R0699,1941,,2002,DiagML - An interoperability platform for test and diagnostics software,exclude,E3,
@@ -1946,7 +1946,7 @@ R0715,1944,,2002,On-chip jitter measurement for phase locked loops,exclude,E4,
 R0726,1945,,2002,Self-checking 1-out-of-n CMOS current-mode checker,exclude,E1,
 R1926,1946,,2002,A 1.2 V built-in architecture for high frequency on-line Iddq/delta Iddq test,exclude,E4,
 R1928,1947,,2002,Application-specific low-voltage current amplifier for system-on-chip IDDQ test,exclude,E4,
-R2637,1948,,2002,Field device diagnostics & testing,,,
+R2637,1948,,2002,Field device diagnostics & testing,exclude,E3,field device diagnostics
 R0612,1949,,2001,Accurate CMOS bridge fault modeling with neural network-based VHDL saboteurs,exclude,E1,
 R0642,1950,,2001,Method for determining existent minimum range of fault elements in control circuits for aluminium reduction cell,exclude,E7,
 R0650,1951,,2001,Open loop method for waveform acquisition on electron-beam probe systems,exclude,E3,
@@ -1955,12 +1955,12 @@ R0656,1953,,2001,Short circuit faults in state-of-the-art ADCs - Are they hard o
 R0659,1954,,2001,Study of test approach for IP cores applicable to SOC designs,exclude,E4,
 R0665,1955,,2001,Tools and procedures for successful TPS management,exclude,E3,
 R1923,1956,,2001,Defect-oriented test scheduling,doubt,,defect-oriented test ordering
-R2636,1957,,2001,Extending IEC61508 reliability evaluation techniques to include common circuit designs used in industrial safety systems,,,
+R2636,1957,,2001,Extending IEC61508 reliability evaluation techniques to include common circuit designs used in industrial safety systems,doubt,,IEC 61508 evaluation of common circuit designs with diagnostics
 R0546,1958,,2000,A comprehensive TDM comparator scheme for effective analysis of oscillation-based test,exclude,E4,
 R0588,1959,,2000,On the robustness of R-2R ladder DAC's,exclude,E4,
 R0596,1960,,2000,System-on-a-Chip: Design and Test,exclude,E5,book
-R2633,1961,,2000,A design tool for fault tolerant systems,,,
-R2634,1962,,2000,Selection of sensors for Safety Instrumented Systems,,,
+R2633,1961,,2000,A design tool for fault tolerant systems,doubt,,coverage analysis of diagnostics in hardware design; analog not stated
+R2634,1962,,2000,Selection of sensors for Safety Instrumented Systems,exclude,E3,sensor selection for SIS
 R0501,1963,,1999,Dynamic testing for radiation induced failures in a standard CMOS submicron technology pixel front-end,exclude,E4,
 R0522,1964,,1999,Investigation of High Frequency Failures on a 0.35μm CMOS IC,exclude,E3,
 R0526,1965,,1999,New totally error propagating compactor for arbitrary cores with digital interfaces,exclude,E1,
@@ -2047,12 +2047,12 @@ R0118,2045,no analog,1989,On the design of a diagnosable system,exclude,E3,
 R0032,2046,no analog,1979,Fault diagnosis for linear systems via multifrequency measurements,include,,
 R2590,2047,no analog,2026,A quality-preserving model for test reduction in electronics production,doubt,,test reduction in electronics production while preserving quality
 R2631,2048,no analog,2026,Training Test Inputs for Spiking Neural Network Hardware: A Case Study on the Loihi 2 Neuromorphic Processor,exclude,E3,
-R2730,2049,no analog,2026,SOTIF-Oriented Safety Validation Framework for Battery Diagnosis,,,
+R2730,2049,no analog,2026,SOTIF-Oriented Safety Validation Framework for Battery Diagnosis,exclude,E3,battery diagnosis validation
 R2500,2050,no analog,2025,Adaptive Testing of Compute-in-Memory Based CNNs Using Probabilistic Test Acceptance Limits,exclude,E3,
 R2513,2051,no analog,2025,An Improved Copula-Based Test Selection Design Strategy for Fault Detection and Isolation Based on PSO,doubt,,system-level test selection
 R2559,2052,no analog,2025,Minimum Time Maximum Fault Coverage Testing of Spiking Neural Networks,exclude,E3,
 R2470,2053,no analog,2024,Learning Assisted Post-Manufacture Testing and Tuning of RRAM-Based DNNs for Yield Recovery,exclude,E3,
-R2708,2054,no analog,2024,Test Selection for Periodic In-field health-check monitoring in fail-safe applications,,,
+R2708,2054,no analog,2024,Test Selection for Periodic In-field health-check monitoring in fail-safe applications,exclude,E1,test selection for digital SoC blocks
 R1755,2055,no analog,2023,Fault-Tolerant Neuromorphic Computing With Memristors Using Functional ATPG for Efficient Recalibration,exclude,E3,
 R2374,2056,no analog,2023,Board-level Functional Test Selection Based on Fault Tree Analysis,doubt,,selection of functional board tests with a fault tree
 R2376,2057,no analog,2023,Compact Functional Testing for Neuromorphic Computing Circuits,exclude,E3,
@@ -2263,17 +2263,17 @@ R2628,2261,no analog,2026,Stealing AI Model Weights Through Covert Communication
 R2629,2262,no analog,2026,Thermo-electric storage systems in renewable energy communities: Modeling challenges and perspectives,exclude,E3,
 R2630,2263,no analog,2026,Towards Resilient Transformer-Encoders: Fault Injection and Hardware Agnostic Error Mitigation,exclude,E3,
 R2632,2264,no analog,2026,Variation-Aware Training and Post-Manufacture Tuning of ReRAM Crossbar-Based Hyperdimensional Computing Systems,exclude,E3,
-R2719,2265,no analog,2026,A Comprehensive Review of Wireless Communication Protocols for Battery Management Systems in Electric Vehicles,,,
-R2720,2266,no analog,2026,Advancements in thermal management and safety of Li-ion batteries for electric vehicles: Addressing thermal runaway and fire risk mitigation,,,
-R2721,2267,no analog,2026,A Review of Data-Driven Approaches and Datasets for Battery State of Health Estimation,,,
-R2722,2268,no analog,2026,"A Scenario-Based Continuous-Time Markov Framework for Preliminary Safety Screening of eVTOL Operations Under Climate, Battery, Power-Supply and Diagnostic Uncertainty",,,
-R2724,2269,no analog,2026,Design and test of a distributed electric tracked chassis using the domain-controlled framework; [基于域控制架构的分布式电动履带底盘设计与试验],,,
-R2726,2270,no analog,2026,Fault Diagnosis and Isolation in Electric Vehicles: A Comprehensive Review,,,
-R2727,2271,no analog,2026,"On-Board Implementation of Thermal Runaway Detection in Lithium-Ion Battery Packs: Methods, Metrics, and Challenges",,,
-R2728,2272,no analog,2026,Secure and Safety-Assured Software Architectures for Electric Vehicles: From Zonal E/E Systems to Zero-Trust EV Ecosystems,,,
-R2729,2273,no analog,2026,Signal Integrity in Distributed BMS: Reliable SPI and Ethernet Communication for Next-Gen Evs,,,
-R2733,2274,no analog,2026,Thermal-Aware Signal Integrity and Fault-Propagation in Distributed Electrification Architectures for Intelligent Vehicles: A System-Level Safety and Reliability Analysis,,,
-R2734,2275,no analog,2026,"Weaponizing Firmware, Cyberwarfare and Battery Management Systems: Ethical and Anticipated Ethical Issues",,,
+R2719,2265,no analog,2026,A Comprehensive Review of Wireless Communication Protocols for Battery Management Systems in Electric Vehicles,exclude,E3,battery management communication
+R2720,2266,no analog,2026,Advancements in thermal management and safety of Li-ion batteries for electric vehicles: Addressing thermal runaway and fire risk mitigation,exclude,E3,battery thermal management
+R2721,2267,no analog,2026,A Review of Data-Driven Approaches and Datasets for Battery State of Health Estimation,exclude,E3,battery state of health
+R2722,2268,no analog,2026,"A Scenario-Based Continuous-Time Markov Framework for Preliminary Safety Screening of eVTOL Operations Under Climate, Battery, Power-Supply and Diagnostic Uncertainty",exclude,E3,eVTOL operations
+R2724,2269,no analog,2026,Design and test of a distributed electric tracked chassis using the domain-controlled framework; [基于域控制架构的分布式电动履带底盘设计与试验],exclude,E3,agricultural chassis
+R2726,2270,no analog,2026,Fault Diagnosis and Isolation in Electric Vehicles: A Comprehensive Review,exclude,E3,electric vehicle fault diagnosis review
+R2727,2271,no analog,2026,"On-Board Implementation of Thermal Runaway Detection in Lithium-Ion Battery Packs: Methods, Metrics, and Challenges",exclude,E3,thermal runaway detection
+R2728,2272,no analog,2026,Secure and Safety-Assured Software Architectures for Electric Vehicles: From Zonal E/E Systems to Zero-Trust EV Ecosystems,exclude,E3,software architectures
+R2729,2273,no analog,2026,Signal Integrity in Distributed BMS: Reliable SPI and Ethernet Communication for Next-Gen Evs,exclude,E3,BMS communication signal integrity
+R2733,2274,no analog,2026,Thermal-Aware Signal Integrity and Fault-Propagation in Distributed Electrification Architectures for Intelligent Vehicles: A System-Level Safety and Reliability Analysis,exclude,E3,BMS communication signal integrity
+R2734,2275,no analog,2026,"Weaponizing Firmware, Cyberwarfare and Battery Management Systems: Ethical and Anticipated Ethical Issues",exclude,E3,firmware attacks
 R1801,2276,no analog,2025,A Novel Dual-Channel Isolated Current Source Gate Driver for High-Frequency MOSFET Operation: With Hardware-in-the-Loop Verification; [Un nouveau pilote de grille à source de courant isolée à deux canaux pour un fonctionnement MOSFET à haute fréquence : Avec vérification matérielle en boucle],exclude,E3,
 R1807,2277,no analog,2025,"Consensus practice guidelines on sacroiliac joint complex pain from a multispecialty, international working group",exclude,E3,
 R1820,2278,no analog,2025,FireFly-S: Exploiting Dual-Side Sparsity for Spiking Neural Networks Acceleration with Reconfigurable Spatial Architecture,exclude,E3,
@@ -2338,12 +2338,12 @@ R2569,2336,no analog,2025,Statistical Analysis of Electric Water Heating Managem
 R2570,2337,no analog,2025,STDP-Trained Spiking Neural Network Reliability Assessment Through Fault Injections,exclude,E3,
 R2571,2338,no analog,2025,Task reliability evaluation method for autonomous intelligent system based on multi-agent approach; [基 于 多 智 能 体 的 智 能 自 主 系 统任 务 可 靠 性 评 估 方 法],exclude,E3,
 R2572,2339,no analog,2025,Thermoelectric Generator Circuit With Tree Topology and Evolutionary Reconfiguration,exclude,E3,
-R2712,2340,no analog,2025,"Intelligent Battery Management System for Electric Vehicle with IoT-based Monitoring, AI-Driven Multiple Fault Diagnosis and Energy Optimization",,,
-R2713,2341,no analog,2025,|Intelligent Battery Management System with AI and IoT for Enhanced EV Efficiency,,,
-R2714,2342,no analog,2025,IoT Based Battery Monitoring System in Electric Vehicle with Multiple Fault Detection Using AI,,,
-R2715,2343,no analog,2025,"Machine Learning-Based Lithium-Ion Battery Modeling Using NARX-RNN, Deep Koopman, and LSTM-RNN",,,
-R2716,2344,no analog,2025,Modelling the Fault Injection of Sensor Interfaces in Automotive Electronics,,,
-R2717,2345,no analog,2025,Recent Advances in Battery Management System Topologies for Electric Vehicles,,,
+R2712,2340,no analog,2025,"Intelligent Battery Management System for Electric Vehicle with IoT-based Monitoring, AI-Driven Multiple Fault Diagnosis and Energy Optimization",exclude,E3,battery fault diagnosis with AI
+R2713,2341,no analog,2025,|Intelligent Battery Management System with AI and IoT for Enhanced EV Efficiency,exclude,E3,battery management with AI
+R2714,2342,no analog,2025,IoT Based Battery Monitoring System in Electric Vehicle with Multiple Fault Detection Using AI,exclude,E3,battery fault detection with AI
+R2715,2343,no analog,2025,"Machine Learning-Based Lithium-Ion Battery Modeling Using NARX-RNN, Deep Koopman, and LSTM-RNN",exclude,E3,battery modelling
+R2716,2344,no analog,2025,Modelling the Fault Injection of Sensor Interfaces in Automotive Electronics,doubt,,fault injection of sensor interface signal chains in ECUs for ISO 26262
+R2717,2345,no analog,2025,Recent Advances in Battery Management System Topologies for Electric Vehicles,exclude,E3,BMS topologies review
 R1765,2346,no analog,2024,A 3-Segment Interpolating String DAC with Low-Cost Built-In-Self-Test Capabilities,exclude,E4,
 R1770,2347,no analog,2024,An Adaptive Local Joint-Weighted Method for Continuous Stripping Intensity Correction of Airborne Bathymetric LiDAR,exclude,E3,
 R1773,2348,no analog,2024,A Novel Discrete Branch Bidirectional Solid-State Circuit Breaker based on Mixture Device,exclude,E3,
@@ -2411,10 +2411,10 @@ R2493,2409,no analog,2024,The Application of GPS-Based Friend/Foe Localization a
 R2494,2410,no analog,2024,Theoretical Approach for Fault Prognosis in Electrical Power Transformers using High Frequency Signals and Artificial Intelligence Techniques,exclude,E3,
 R2495,2411,no analog,2024,Trusted SMEs for Sustainable Growth of Europeans Economical Backbone to Strengthen the Digital Sovereignty: The KDT Resilient Trust Project,exclude,E3,
 R2496,2412,no analog,2024,Unbalanced Few-Sample Fault Diagnosis Approach for Mechanical Equipment Based on Multi-Scale Class-Weighted Balanced Network,exclude,E3,
-R2704,2413,no analog,2024,Research on Fault Diagnosis and Application of Battery Systems Based on Multi-entropy Fusion; [基于多熵融合的动力电池故障诊断与应用研究],,,
-R2705,2414,no analog,2024,"Resiliency Approaches in Convolutional, Photonic, and Spiking Neural Networks",,,
-R2706,2415,no analog,2024,Simulation based methodology for fault analysis of PCB designs,,,
-R2707,2416,no analog,2024,Testing Spintronics Implemented Monte Carlo Dropout-Based Bayesian Neural Networks,,,
+R2704,2413,no analog,2024,Research on Fault Diagnosis and Application of Battery Systems Based on Multi-entropy Fusion; [基于多熵融合的动力电池故障诊断与应用研究],exclude,E3,battery fault diagnosis
+R2705,2414,no analog,2024,"Resiliency Approaches in Convolutional, Photonic, and Spiking Neural Networks",exclude,E3,neural network resiliency
+R2706,2415,no analog,2024,Simulation based methodology for fault analysis of PCB designs,doubt,,board-level fault analysis with stimulus detection
+R2707,2416,no analog,2024,Testing Spintronics Implemented Monte Carlo Dropout-Based Bayesian Neural Networks,exclude,E3,spintronic neural networks
 R1741,2417,no analog,2023,An Efficient Time-Tick based BIST Scheme to Calculate Static Errors of ADC,exclude,E4,
 R2355,2418,no analog,2023,A Comprehensive Review of Fault Diagnosis and Prognosis Techniques in High Voltage and Medium Voltage Electrical Power Lines,exclude,E3,
 R2357,2419,no analog,2023,A Fault Feature Learning Model for Zero-shot Intelligent Diagnosis of Compound Faults in Rotating Machinery,exclude,E3,
@@ -2459,8 +2459,8 @@ R2415,2457,no analog,2023,Testing and Reliability of Spiking Neural Networks: A 
 R2417,2458,no analog,2023,The Effect of Cable Aging on Surge Arresters Designed by Genetic Algorithm,exclude,E3,
 R2419,2459,no analog,2023,UHA-CycleGAN: Unpaired hybrid attention network based on CycleGAN for terahertz image super-resolution,exclude,E3,
 R2420,2460,no analog,2023,Using the LSTM Neural Network and the UWB Positioning System to Predict the Position of Low and High Speed Moving Objects,exclude,E3,
-R2693,2461,no analog,2023,ASIL-D Compliant Battery Monitoring IC with High Measurement Accuracy and Robust Communication,,,
-R2696,2462,no analog,2023,HIL based Real-Time Co-Simulation for BEV Fault Injection Testing,,,
+R2693,2461,no analog,2023,ASIL-D Compliant Battery Monitoring IC with High Measurement Accuracy and Robust Communication,doubt,,ASIL-D battery monitoring IC; safety mechanisms not detailed
+R2696,2462,no analog,2023,HIL based Real-Time Co-Simulation for BEV Fault Injection Testing,exclude,E3,vehicle-level HIL fault injection
 R2301,2463,no analog,2022,An Analysis of Power Losses in an LLC Converter in Matlab-Simulink Environment,exclude,E3,
 R2302,2464,no analog,2022,A New Application of Power Line Communication Technologies: Prognosis of Failure in Underground Cables,exclude,E3,
 R2304,2465,no analog,2022,An Innovative Single Shot Power Quality Disturbance Detector Algorithm,exclude,E3,
@@ -2501,7 +2501,7 @@ R2351,2499,no analog,2022,Sparse Dictionary-Based Magnetic Resonance Superresolu
 R2352,2500,no analog,2022,SyncLock: RF Transceiver Security Using Synchronization Locking,exclude,E3,
 R2353,2501,no analog,2022,Time Assisted SAR ADC with Bit-guess and Digital Error Correction,exclude,E3,
 R2354,2502,no analog,2022,VLSI Low Power Design Analysis Modeling Strategies,exclude,E3,
-R2689,2503,no analog,2022,Digital Defect-Oriented Test Methodology for Flipped Voltage Follower Low Dropout (LDO) Voltage Regulators,,,
+R2689,2503,no analog,2022,Digital Defect-Oriented Test Methodology for Flipped Voltage Follower Low Dropout (LDO) Voltage Regulators,doubt,,defect-oriented test of an LDO with defect coverage for ISO 26262
 R1695,2504,no analog,2021,Incorporating Demographic and Heartbeat Features with Multichannel ECG for Cardiac Abnormality Detection using Parallel CNN and GAP Network,exclude,E3,
 R1704,2505,no analog,2021,Soft Fault Diagnosis Using URV-LDA Transformed Feature Dictionary,exclude,E2,
 R2239,2506,no analog,2021,Addressing soft error and security threats in dnns using learning driven algorithmic checks,exclude,E3,
@@ -2543,7 +2543,7 @@ R2296,2541,no analog,2021,The Adaptive Calibration Method for Single-Beam Distan
 R2297,2542,no analog,2021,Thermal monitoring of underground medium voltage cables based on machine learning techniques,exclude,E3,
 R2298,2543,no analog,2021,Two pattern timing tests capturing defect-induced multi-gate delay impact of shorts,exclude,E1,
 R2299,2544,no analog,2021,What is the effect of outer jacket degradation on the communication parameters? A case study of the twisted pair cable applied in the railway industry,exclude,E3,
-R2687,2545,no analog,2021,Cyclisation of Safety Diagnoses: Influence on the Evaluation of Fault Metrics,,,
+R2687,2545,no analog,2021,Cyclisation of Safety Diagnoses: Influence on the Evaluation of Fault Metrics,exclude,E3,"PMHF and cyclic DC calculation, not analog; T0.8"
 R2161,2546,no analog,2020,"A comparison of power quality disturbance detection and classification methods using CNN, LSTM and CNN-LSTM",exclude,E3,
 R2162,2547,no analog,2020,A complex neural classifier for the fault prognosis and diagnosis of overhead electrical lines,exclude,E3,
 R2163,2548,no analog,2020,A Comprehensive Comparison of Resonant Topologies for Magnetic Wireless Power Transfer,exclude,E3,
@@ -2602,15 +2602,15 @@ R2151,2600,no analog,2019,Improving test and diagnosis efficiency through ensemb
 R2152,2601,no analog,2019,Machine learning-based automatic generation of eFuse configuration in NAND flash chip,exclude,E3,
 R2158,2602,no analog,2019,Selection Optimization of Test Path Based on Bidirectional Breadth First Search and Binary Artificial Fish Swarm Algorithm,doubt,,
 R2159,2603,no analog,2019,Variability Cancellation to Improve Diagnostic Performance of Testing through Silicon Vias in Power Distribution Network of 3D-IC,exclude,E4,
-R2676,2604,no analog,2019,A Safety Concept for an Automotive Lithium-based Battery Management System,,,
-R2684,2605,no analog,2019,Use of safety MCUs for industrial and automotive applications,,,
+R2676,2604,no analog,2019,A Safety Concept for an Automotive Lithium-based Battery Management System,exclude,E4,practice; BMS safety concept without coverage computation
+R2684,2605,no analog,2019,Use of safety MCUs for industrial and automotive applications,exclude,E5,presentation on safety MCUs
 R1585,2606,no analog,2018,A Monobit Built-In Test and Diagnostic System for Flexible Electronic Interconnect,exclude,E4,
 R1615,2607,no analog,2018,Research on detection system for 10kV distribution switcher of both Primary and secondary technology,exclude,E3,
 R1616,2608,no analog,2018,Selection of test paths for solder joint intermittent connection faults under DC stimulus,doubt,,test path selection for intermittent solder joints
 R1618,2609,no analog,2018,Site acceptance testing of a Duke Energy automation project utilizing a simulation based test approach,exclude,E3,
 R2126,2610,no analog,2017,Yield Forecasting Across Semiconductor Fabrication Plants and Design Generations,exclude,E3,
-R2664,2611,no analog,2017,"Engineering approach (reliability analysis, metrology and environmental testing procedures) for newly developed marine sensors",,,
-R2669,2612,no analog,2017,On-line state estimation of automotive batteries using in-situ impedance spectroscopy,,,
+R2664,2611,no analog,2017,"Engineering approach (reliability analysis, metrology and environmental testing procedures) for newly developed marine sensors",exclude,E3,marine sensors
+R2669,2612,no analog,2017,On-line state estimation of automotive batteries using in-situ impedance spectroscopy,exclude,E3,battery impedance spectroscopy
 R2090,2613,no analog,2016,A Review on Key Issues and Challenges in Devices Level MEMS Testing,exclude,E5,review
 R2091,2614,no analog,2016,Brownian distance correlation-directed search: A fast feature selection technique for alternate test,include,,measurement selection for alternate test
 R2095,2615,no analog,2016,Estimation of feasible materials and thermal conditions in a trapezoidal fin using genetic algorithm,exclude,E3,
@@ -2622,13 +2622,13 @@ R2103,2620,no analog,2016,Optimal Method for Catastrophic Faults Diagnosis in RC
 R2104,2621,no analog,2016,Probing method of unmanned aircraft high power electromagnetic effects,exclude,E3,
 R2106,2622,no analog,2016,Soft-fault diagnostic method based on locus circle of steady-state node-voltage vector,exclude,E2,
 R2107,2623,no analog,2016,System identification using FRA and a modified MLMVN with arbitrary complex-valued inputs,exclude,E3,
-R2659,2624,no analog,2016,Improving the Functional Safety of Automotive Batteries Using in-situ Impedance Spectroscopy,,,
+R2659,2624,no analog,2016,Improving the Functional Safety of Automotive Batteries Using in-situ Impedance Spectroscopy,exclude,E3,battery impedance spectroscopy
 R2082,2625,no analog,2015,Testing fully differential amplifiers using common mode feedback circuit: A case study,exclude,E4,
 R1437,2626,no analog,2014,System identification and modelling based on a double modified multi-valued neural network,exclude,E3,
 R2057,2627,no analog,2014,Complex valued neural network modelling of the balun of a biconical antenna,exclude,E3,
 R2063,2628,no analog,2014,Novel fault detection optimization algorithm for single event effect system based on multi-information entropy fusion,exclude,E3,
 R2065,2629,no analog,2014,"Reducing test cost of integrated, heterogeneous systems using pass-fail test data analysis",doubt,,
-R2650,2630,no analog,2014,Method of fault injection for medical device based on ISO 26262,,,
+R2650,2630,no analog,2014,Method of fault injection for medical device based on ISO 26262,exclude,E3,"fault injection for medical devices, not analog"
 R1361,2631,no analog,2013,Dynamic Specification Testing and Diagnosis of High-Precision Sigma-Delta ADCs,exclude,E4,
 R1385,2632,no analog,2013,Physics Based Fault Models for Testing High-Voltage LDMOS,exclude,E4,
 R1386,2633,no analog,2013,Programmable Leakage Test and Binning for TSVs With Self-Timed Timing Control,exclude,E4,
@@ -2645,9 +2645,9 @@ R2028,2643,no analog,2012,Parasitic parameter estimation using multi-frequency p
 R2029,2644,no analog,2012,Research of identification and positioning system for network failure based on BP neural network,exclude,E3,
 R2031,2645,no analog,2012,Test-data volume optimization for diagnosis,exclude,E1,
 R2034,2646,no analog,2012,The concept of using data mining methods for creating efficiency and reliability model of middleware applications,exclude,E3,
-R2644,2647,no analog,2012,A quantified safety analysis for Safety Fuzzy Logic Controller 1002 reliability block diagrams,,,
-R2646,2648,no analog,2012,Electromobility without Risk? Increased Battery Security and Availability through Battery Management Systems,,,
-R2647,2649,no analog,2012,PSI5 in Powertrain,,,
+R2644,2647,no analog,2012,A quantified safety analysis for Safety Fuzzy Logic Controller 1002 reliability block diagrams,exclude,E1,FPGA fuzzy controller
+R2646,2648,no analog,2012,Electromobility without Risk? Increased Battery Security and Availability through Battery Management Systems,exclude,E3,battery management
+R2647,2649,no analog,2012,PSI5 in Powertrain,exclude,E3,sensor communication interface
 R1238,2650,no analog,2011,A supply current testable register string DAC of decoder type,exclude,E4,
 R1249,2651,no analog,2011,Factor-space dimension reduction for sensitivity analysis of intelligent electronic devices,exclude,E3,
 R1267,2652,no analog,2011,"Reducing Test Execution Cost of Integrated, Heterogeneous Systems Using Continuous Test Data",doubt,,
@@ -2703,7 +2703,7 @@ R0718,2701,no analog,2002,Oscillation-based test in oversampled ΣΔ modulators,
 R0628,2702,no analog,2001,"Design for test using a multi-tiered, model based specification approach",exclude,E3,
 R0653,2703,no analog,2001,Research on floorplanning,exclude,E3,
 R1925,2704,no analog,2001,Oriented function hierarchical structure for fault diagnosis of complicated systems,exclude,E3,
-R2635,2705,no analog,2001,Accelerated evolution of the system support paradigm,,,
+R2635,2705,no analog,2001,Accelerated evolution of the system support paradigm,exclude,E5,position paper
 R0562,2706,no analog,2000,Cost trade-offs in system on chip designs,exclude,E5,
 R0586,2707,no analog,2000,Novel method of model-based measurement for A/D and D/A converters,doubt,,
 R0594,2708,no analog,2000,Standard missile all up round (AUR) testing on a common munitions standard test equipment platform,exclude,E3,
