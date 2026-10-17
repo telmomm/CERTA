@@ -1,0 +1,7 @@
+rater_a,rater_b,records,agreement,kappa,a_to_full_text,b_to_full_text
+main,chatgpt,2632,0.465,0.137,0.282,0.775
+main,deepseek,1355,0.824,0.535,0.283,0.217
+main,grok,2632,0.791,0.441,0.282,0.209
+chatgpt,deepseek,1412,0.417,0.107,0.763,0.21
+chatgpt,grok,2734,0.419,0.121,0.775,0.206
+deepseek,grok,1412,0.798,0.392,0.21,0.21

@@ -4,3 +4,4 @@ ipykernel
 nbconvert
 spicefault==0.4.1
 matplotlib
+openpyxl

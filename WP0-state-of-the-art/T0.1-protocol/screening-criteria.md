@@ -16,7 +16,7 @@ Works on analog circuits of two kinds:
 
 # What has to be done {-}
 
-The notebook of `T0.3-screening` shows the records one at a time, with title and abstract. For each one, choose one of these three decisions:
+The records are read one at a time, with their title and abstract, in the notebook of `T0.3-screening` or in the screening spreadsheet. For each one, choose one of these three decisions:
 
 | Decision | When |
 | --------- | ------------------------------------------------------------ |
@@ -39,7 +39,7 @@ Three yeses: `include`.
 Only the first one that applies is recorded.
 
 | Code | Reason | Typical example |
-| ---- | --------------------------------------------------------- | ------------------------------------------------------------ |
+| -------- | --------------------------------------------------------- | ------------------------------------------------------------ |
 | E1 | Digital only | Test point insertion in logic, scan chains, fault injection in a processor |
 | E2 | Diagnosis without selection | "Fault diagnosis with wavelets and a neural network", always measuring the output |
 | E3 | Other domain | Power networks, sensor placement in a plant, battery state of charge or cell faults |
